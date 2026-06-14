@@ -1,0 +1,163 @@
+{
+  "version": 3,
+  "lastSync": "2026-06-14T03:09:21.477Z",
+  "schema": "v3 — 双工具协同 + 共享大脑( shared-brain )",
+  "openCode": {
+    "status": "idle",
+    "currentTask": "今日迭代全部完成",
+    "lastOutput": "写作风格定型v3+WeChat管线升级+双工具闭环+SYSTEM_CORE固化+汇竑PPT模板规格归档",
+    "lastHandoff": "",
+    "lastHeartbeat": "2026-06-14T03:09:21.466Z",
+    "model": "opencode/deepseek-v4-flash-free",
+    "activeSession": ""
+  },
+  "workBuddy": {
+    "status": "idle",
+    "currentTask": "v3系统验证完成，准备就绪",
+    "lastInput": "用户切换到 OpenCode",
+    "lastHandoff": "2026-06-14T07-35-00-000Z_workbuddy_验证完成_准备就绪.json",
+    "lastHeartbeat": "2026-06-14T07:35:00.000Z"
+  },
+  "pipeline": {
+    "phase": "publish",
+    "topic": "双工具闭环首次测试",
+    "currentStep": "等待 OpenCode 新任务",
+    "artifacts": [],
+    "blocked": false,
+    "blockedReason": "",
+    "handoffPending": false,
+    "pendingHandoffFrom": "opencode"
+  },
+  "brain": {
+    "handoffDir": "brain/handoff/",
+    "taskQueue": "brain/task-queue.json",
+    "decisionsLog": "brain/decisions.json",
+    "contextLog": "brain/context-log.json",
+    "userPreferences": "brain/user-preferences.json",
+    "lastHandoffProcessed": "2026-06-14T02-40-25-501Z_双工具闭环首次测试完成.json"
+  },
+  "project": {
+    "name": "电力新能源 + AI 赛道 · PE/VC 一级股权投资内容管线",
+    "wechat": {
+      "appId": "wx7ae4cfe0d680c0fe",
+      "drafts": [
+        {
+          "title": "AI芯片功耗三年翻三倍，这四条能源赛道正在被PE疯狂扫货",
+          "mediaId": "TuLWMuvbx53uExwvVUMFoXkSF4vQmQF1B6gaOWZowvUbTxsnxx4rblXDfa71pWCO",
+          "status": "draft"
+        },
+        {
+          "title": "3M退出、芯片功耗2300W，这里藏着千亿市场",
+          "mediaId": "TuLWMuvbx53uExwvVUMFobPrlniXVes0d8rlGb8nOETpcw7Pg4QLSENYqfRztHvB",
+          "status": "draft"
+        },
+        {
+          "title": "同一赛道，两种命运：润泽科技vs数据港的AIDC分水岭",
+          "mediaId": "TuLWMuvbx53uExwvVUMFoXpQ7guaDdAGJ4mrjw4SRvaCxDwNaxfeRei-Fzcizb-o",
+          "status": "draft"
+        },
+        {
+          "title": "3M退出留下40%市场空白，冷却液成液冷赛道唯一消耗品",
+          "mediaId": "TuLWMuvbx53uExwvVUMFoXkSF4vQmQF1B6gaOWZowvUbTxsnxx4rblXDfa71pWCO",
+          "status": "draft"
+        },
+        {
+          "title": "AIDC绿电一体化：算电协同政策落地下的PE/VC机会",
+          "mediaId": "TuLWMuvbx53uExwvVUMFoXpQ7guaDdAGJ4mrjw4SRvaCxDwNaxfeRei-Fzcizb-o",
+          "status": "draft"
+        }
+      ]
+    },
+    "website": {
+      "repo": "https://github.com/David-Chen1977/personal-website",
+      "pagesUrl": "https://chendaolei-website.pages.dev",
+      "articles": [
+        {
+          "slug": "ai-infrastructure-three-investment-tracks",
+          "status": "live"
+        },
+        {
+          "slug": "liquid-cooling-pe-investment-map",
+          "status": "live"
+        },
+        {
+          "slug": "aidc-two-strong-comparison",
+          "status": "live"
+        },
+        {
+          "slug": "coolant-material-pe-investment",
+          "status": "live"
+        },
+        {
+          "slug": "aidc-green-electricity-pe-investment",
+          "status": "live"
+        }
+      ]
+    },
+    "ppts": [
+      {
+        "topic": "深挖三个投资方向",
+        "file": "01_深挖三个投资方向_PPT.pptx",
+        "slides": 10
+      },
+      {
+        "topic": "液冷赛道PE投资视角",
+        "file": "02_液冷赛道PE投资视角_PPT.pptx",
+        "slides": 11
+      },
+      {
+        "topic": "算电协同公司深度对比",
+        "file": "03_算电协同公司深度对比_PPT.pptx",
+        "slides": 10
+      },
+      {
+        "topic": "冷却液材料PE投资视角",
+        "file": "04_冷却液材料赛道PE投资视角_PPT.pptx",
+        "slides": 6
+      },
+      {
+        "topic": "AIDC绿电一体化PE投资视角",
+        "file": "05_AIDC绿电一体化PE投资视角_PPT.pptx",
+        "slides": 5
+      }
+    ]
+  },
+  "operationLog": [
+    {
+      "timestamp": "2026-06-14T23:30:00.000Z",
+      "tool": "system",
+      "action": "state.json v3 升级",
+      "detail": "新增 brain 引用、handoffPending、任务队列桥接"
+    },
+    {
+      "timestamp": "2026-06-13T23:29:09.063Z",
+      "tool": "opencode",
+      "action": "idle",
+      "detail": "验证测试"
+    },
+    {
+      "timestamp": "2026-06-13T23:32:07.871Z",
+      "tool": "opencode",
+      "action": "idle",
+      "detail": "双工具协同v3升级完成，待WorkBuddy验证"
+    },
+    {
+      "timestamp": "2026-06-14T01:23:58.531Z",
+      "tool": "opencode",
+      "action": "idle",
+      "detail": "写作风格首次迭代完成，04文章已重写"
+    },
+    {
+      "timestamp": "2026-06-14T02:34:07.556Z",
+      "tool": "opencode",
+      "action": "idle",
+      "detail": "闭环测试：05文章+配图提示词已就绪"
+    },
+    {
+      "timestamp": "2026-06-14T03:09:21.477Z",
+      "tool": "opencode",
+      "action": "idle",
+      "detail": "今日迭代全部完成"
+    }
+  ]
+}

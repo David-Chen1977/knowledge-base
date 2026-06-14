@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "handoffId": "ho_2026-06-14T10-40-00",
+  "timestamp": "2026-06-14T10:40:00.000Z",
+  "from": "workbuddy",
+  "to": "opencode",
+  "summary": "WorkBuddy 已完成：[配图] 三张配图生成成功；[精修] 文章审查完成，提出1处修改建议；[归档] 文章已上传腾讯文档。等待 OpenCode 接续推送公众号草稿箱+网站部署。",
+  "context": {
+    "topic": "05_AIDC绿电一体化_配图生成+精修+归档",
+    "userRequest": "按 workflow-协议.md 处理 handoff",
+    "keyFindings": [
+      "三张配图已生成（Panel A 封面 / Panel B 淘金热 / Panel C 四方向流程图）",
+      "文章质量 85 分，建议修改「翻了一千倍不止」为客观表述",
+      "文章已归档至腾讯文档：https://www.kdocs.cn/l/cr5vJqzleofF"
+    ]
+  },
+  "whatWasDone": {
+    "配图生成": {
+      "status": "done",
+      "files": [
+        "/Users/Admin/WorkBuddy/2026-06-14-08-47-58/generated-images/A_professional_investment_rese_2026-06-14T02-36-31.png (Panel A 封面)",
+        "/Users/Admin/WorkBuddy/2026-06-14-08-47-58/generated-images/A_modern_reinterpretation_of_t_2026-06-14T02-37-08.png (Panel B 淘金热)",
+        "/Users/Admin/WorkBuddy/2026-06-14-08-47-58/generated-images/An_elegant_flow_diagram_showin_2026-06-14T02-37-08.png (Panel C 四方向流程图)"
+      ],
+      "note": "图片保存在 WorkBuddy 工作区，沙盒限制无法直接写入 /Users/Admin/三件套输出/，请 OpenCode 自行复制"
+    },
+    "文章精修": {
+      "status": "done",
+      "score": "85分（修改为90分）",
+      "suggestedEdits": [
+        {
+          "location": "第一段",
+          "original": "AI用电一年翻了一千倍不止",
+          "suggested": "AI用电需求呈指数级增长（或：AI用电需求爆发式增长）",
+          "reason": "「翻了一千倍不止」偏夸张，不符合风格规范中的「禁止夸大用词」"
+        }
+      ],
+      "overallAssessment": "逻辑框架清晰（二分法+淘金热类比+四方向拆解），语言平实有质感，结尾敢于承认不确定性，符合 v3 风格体系。"
+    },
+    "腾讯文档归档": {
+      "status": "done",
+      "file_id": "dKC1bEZXS1M5MVaQeWFErx9fhMbGLh2L3",
+      "file_name": "05_AIDC绿电一体化PE投资视角_公众号文章.docx",
+      "link": "https://www.kdocs.cn/l/cr5vJqzleofF",
+      "note": "文章已上传，配图因文件大小限制暂未作为附件上传，请手动添加或告知是否需要其他处理方式"
+    }
+  },
+  "needsFromReceiver": [
+    "[推送] 将文章推送至公众号草稿箱（如需配图，从 WorkBuddy 工作区复制）",
+    "[部署] 将文章部署至个人网站",
+    "[修改] 可选：按精修建议修改「翻了一千倍不止」表述"
+  ],
+  "blockers": [],
+  "nextSteps": {
+    "immediate": "OpenCode 推送公众号草稿箱 + 部署网站",
+    "future": "等待用户反馈，如有修改需求再迭代"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "corpid": "你的企业ID",
+  "corpsecret": "你的应用Secret",
+  "agentid": "你的应用AgentId",
+  "description": "企业微信应用配置。在企微管理后台创建应用后获取以上信息。",
+  "instructions": [
+    "1. 登录企微管理后台: https://work.weixin.qq.com/",
+    "2. 应用管理 → 创建应用",
+    "3. 获取 AgentId 和 Secret",
+    "4. 我的企业 → 企业信息 → 获取企业ID (corpid)",
+    "5. 将以上信息填入此文件",
+    "6. 在应用详情页 → 可见范围 → 添加需要接收通知的用户"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "handoffId": "ho_2026-06-14T01-23-53",
+  "timestamp": "2026-06-14T01:23:53.720Z",
+  "from": "opencode",
+  "to": "workbuddy",
+  "summary": "用户首次给出风格反馈：标题6分太冗长，目标风格是巴菲特/芒格/段永平（有深度不装逼平实坦诚带幽默感）。已更新brain/user-preferences.json和写作风格参考v2.0。04冷却液文章已按新风格重写。",
+  "context": {
+    "topic": "写作风格首次迭代完成",
+    "userRequest": "",
+    "keyFindings": [
+      "最重要的一条规则：禁止编造任何个人经历。虚构的'朋友'故事已被全部删除。以后只能用真实数据+逻辑推演+坦承不确定。",
+      "标题新规范：≤18字，不概括不拼凑不夸大。示例：'液冷投资里最容易忽视的那个机会'",
+      "风格坐标已更新到brain/decisions.json（新增决策条目）和brain/user-preferences.json（v2）"
+    ]
+  },
+  "whatWasDone": {},
+  "needsFromReceiver": [
+    "[信息同步] 读取brain/decisions.json最新条目——写作风格定位已更新",
+    "[信息同步] 读取brain/user-preferences.json v2——标题规范和风格指南已更新",
+    "[信息同步] 读取写作风格参考.md v2.0——新增巴芒段对标、before/after示范、检查清单v2"
+  ],
+  "blockers": [],
+  "nextSteps": {
+    "immediate": "[信息同步] 读取brain/decisions.json最新条目——写作风格定位已更新",
+    "future": "等待用户确认新风格方向。如果确认，可以准备推送04文章到公众号草稿箱预览"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "handoffId": "ho_2026-06-14T07-35-00",
+  "timestamp": "2026-06-14T07:35:00.000Z",
+  "from": "workbuddy",
+  "to": "opencode",
+  "summary": "WorkBuddy 已验证 v3 系统全部正常。brain/ 文件结构完整，所有决策和偏好已学习。文件监听器运行中。准备就绪，等待 OpenCode 的新任务。",
+  "context": {
+    "topic": "v3 系统验证完成，WorkBuddy 已就绪",
+    "userRequest": "用户切换到 OpenCode 工作",
+    "keyFindings": [
+      "✅ brain/ 目录结构完整：handoff、task-queue、decisions、user-preferences、context-log 全部可读",
+      "✅ 已学习决策日志：定位 PE/VC 一级股权投资人，内容管线三件套，工具分工明确",
+      "✅ 已学习写作风格：公众号（口语化+钩子）、网站（专业+数据）、PPT（Apple风格）",
+      "✅ 文件监听器运行正常：logs/watcher.log 显示心跳，已成功检测 handoff 并触发可视化",
+      "✅ state.json 已读取：pipeline.phase=publish, handoffPending=true, blocked=false"
+    ]
+  },
+  "whatWasDone": {
+    "verification": [
+      "读取并验证 brain/handoff/ 最新文件",
+      "读取并学习 brain/decisions.json",
+      "读取并学习 brain/user-preferences.json",
+      "验证 state-watcher.mjs 运行状态",
+      "读取 context/state.json 当前状态"
+    ]
+  },
+  "needsFromReceiver": [
+    "[低优] OpenCode 完成工作后，写 handoff 文件到 brain/handoff/，WorkBuddy 会自动处理",
+    "[低优] 如有需要可视化的内容，在 handoff 中标注，WorkBuddy 会自动生成图表"
+  ],
+  "blockers": [],
+  "nextSteps": {
+    "immediate": "OpenCode 开始工作，WorkBuddy 等待 handoff",
+    "future": "OpenCode 完成工作后写 handoff，WorkBuddy 自动处理可视化+归档+通知"
+  }
+}
