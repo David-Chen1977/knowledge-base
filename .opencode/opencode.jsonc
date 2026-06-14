@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "行业分析": ".opencode/skills/行业分析技能.md",
+    "协议审查": ".opencode/skills/协议审查技能.md",
+    "公众号写作": ".opencode/skills/公众号写作技能.md"
+  },
+  "mcp": {
+    "financial-mcp": {
+      "type": "local",
+      "command": ["/Users/Admin/.local/bin/npx", "-y", "@anthropic/financial-mcp-server"],
+      "enabled": false
+    },
+    "momentum-mcp": {
+      "type": "local",
+      "command": ["/Users/Admin/.local/bin/npx", "-y", "momentum-mcp"],
+      "enabled": false
+    },
+    "pptx-mcp": {
+      "type": "local",
+      "command": ["/Users/Admin/.local/bin/npx", "-y", "pptx-mcp-server"],
+      "enabled": false
+    }
+  }
+}
