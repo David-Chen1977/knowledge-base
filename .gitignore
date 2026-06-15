@@ -1,11 +1,9 @@
-# API密钥和环境变量
-scripts/.env
-# 操作系统文件
+# OS files
 .DS_Store
 Thumbs.db
-# 产出缓存
-三件套输出/*.pptx
-三件套输出/*.png
-三件套输出/*.jpg
-# 临时日志
-_archive/
+
+# Node
+node_modules/
+
+# Logs
+*.log
