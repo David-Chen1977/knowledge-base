@@ -66,3 +66,26 @@ for f in "${CORE_FILES[@]}"; do do_sync "$KB/$f"; done
 for g in "${RESEARCH_GLOBS[@]}"; do for f in $KB/$g; do [ -f "$f" ] && do_sync "$f"; done; done
 
 log "✅ 同步: +$sync 跳过 $skip"
+
+# 如有新内容，自动构建并部署到 Vercel
+if [ "$sync" -gt 0 ]; then
+  log "🚀 检测到 $sync 个文件更新，触发网站重新部署..."
+  
+  cd "/Users/Admin/OpencodeWorkspace/知识库网站" || exit
+  
+  # 构建
+  if npm run build >> "$LOG_FILE" 2>&1; then
+    log "  ✓ VitePress 构建成功"
+    
+    # 部署到 Vercel
+    if npx vercel deploy docs/.vitepress/dist --prod --yes --project knowledge-base-site >> "$LOG_FILE" 2>&1; then
+      log "  ✓ Vercel 部署成功 → https://knowledge-base-site-iota.vercel.app"
+    else
+      log "  ⚠️ Vercel 部署失败（可手动重试）"
+    fi
+  else
+    log "  ⚠️ VitePress 构建失败"
+  fi
+  
+  cd - > /dev/null
+fi
