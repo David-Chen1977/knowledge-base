@@ -1,40 +1,5 @@
 {
-  "last_refresh": "2026-06-15T14:34:58Z",
-  "data_sources": {
-    "china_energy": {
-      "status": "available",
-      "tools": [
-        "get_national_stats",
-        "get_province_stats",
-        "get_queue_projects",
-        "get_spot_market",
-        "get_spot_prices",
-        "get_investment_ref",
-        "search_policy"
-      ]
-    },
-    "prospector_energy": {
-      "status": "available",
-      "free_tools": [
-        "get_queue_stats",
-        "get_developer_stats",
-        "get_investable_summary",
-        "get_itc_summary",
-        "get_milestone_summary",
-        "get_lmp_zones"
-      ]
-    }
-  },
-  "enriched_files": [
-    "电力新能源/赛道总览.md",
-    "电力新能源/储能/产业链.md",
-    "电力新能源/光伏/产业链.md",
-    "电力新能源/风电/产业链.md",
-    "电力新能源/智能电网/新兴赛道.md",
-    "电力新能源/碳市场/赛道文件.md",
-    "电力新能源/电力市场/赛道文件.md",
-    "算电协同/数据中心+能源/赛道文件.md",
-    "一级市场估值基准.md"
-  ],
-  "refresh_instructions": "Run 'refresh_commands.md::全量刷新' in AI conversation to execute actual MCP data pulls"
+  "last_refresh": "2026-06-15T16:08:15Z",
+  "next_scheduled": "2026-06-16T04:08:15Z",
+  "mode": "指令已生成, 等待AI对话执行"
 }
