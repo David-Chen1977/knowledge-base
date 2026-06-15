@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "id": "bundle_01",
+      "title": "算随电动：数据中心虚拟电厂首单交易的商业逻辑",
+      "status": "done",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "done_at": "2026-06-15"
+    },
+    {
+      "id": "bundle_02",
+      "title": "液冷赛道PE投资地图：千亿市场的六大主题与全球标的矩阵",
+      "status": "done",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "done_at": "2026-06-15"
+    },
+    {
+      "id": "bundle_03",
+      "title": "AIDC两强对比：润泽科技狂奔，数据港追赶，算电协同谁主沉浮",
+      "status": "done",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "done_at": "2026-06-15"
+    },
+    {
+      "id": "bundle_04",
+      "title": "液冷赛道PE投资地图：冷却液材料的百亿国产替代机会",
+      "status": "done",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "done_at": "2026-06-15"
+    },
+    {
+      "id": "bundle_05",
+      "title": "AIDC绿电一体化：算电协同政策落地下的PE/VC机会图谱",
+      "status": "done",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "done_at": "2026-06-15"
+    },
+    {
+      "id": "topic_006",
+      "title": "AI算力基建投资窗口期判断",
+      "status": "pending",
+      "priority": "P1",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "created_at": "2026-06-15"
+    },
+    {
+      "id": "topic_007",
+      "title": "储能出海2026机会分析",
+      "status": "pending",
+      "priority": "P2",
+      "types": [
+        "article",
+        "website",
+        "ppt",
+        "video"
+      ],
+      "created_at": "2026-06-15"
+    }
+  ]
+}

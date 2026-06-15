@@ -267,24 +267,45 @@ def update_draft(
         return False
 
 
-def upload_image(access_token: str, image_path: str) -> Optional[str]:
-    """上传图片到微信素材库，返回 media_id（用于封面）"""
+def upload_cover(access_token: str, image_path: str) -> Optional[str]:
+    """上传封面图到微信素材库，返回 media_id（用于封面 thumb_media_id）"""
     url = "https://api.weixin.qq.com/cgi-bin/material/add_material"
-    params = {"access_token": access_token, "type": "image"}
+    params = {"access_token": access_token, "type": "thumb"}
 
     try:
         with open(image_path, "rb") as f:
-            files = {"media": (os.path.basename(image_path), f, "image/jpeg")}
+            files = {"media": (os.path.basename(image_path), f, "image/png")}
             resp = requests.post(url, params=params, files=files, timeout=30)
             data = resp.json()
             if "media_id" in data:
-                print(f"✅ 图片上传成功！media_id: {data['media_id']}")
+                print(f"✅ 封面上传成功！media_id: {data['media_id']}")
                 return data["media_id"]
             else:
-                print(f"⚠️ 图片上传失败: {data}")
+                print(f"⚠️ 封面上传失败: {data}")
                 return None
     except Exception as e:
-        print(f"❌ 图片上传异常: {e}")
+        print(f"❌ 封面上传异常: {e}")
+        return None
+
+
+def upload_body_image(access_token: str, image_path: str) -> Optional[str]:
+    """上传正文图片到微信，返回可嵌入正文的永久 CDN URL"""
+    url = "https://api.weixin.qq.com/cgi-bin/media/uploadimg"
+    params = {"access_token": access_token}
+
+    try:
+        with open(image_path, "rb") as f:
+            files = {"media": (os.path.basename(image_path), f, "image/png")}
+            resp = requests.post(url, params=params, files=files, timeout=30)
+            data = resp.json()
+            if "url" in data:
+                print(f"✅ 正文图片上传成功 → {data['url']}")
+                return data["url"]
+            else:
+                print(f"⚠️ 正文图片上传失败: {data}")
+                return None
+    except Exception as e:
+        print(f"❌ 正文图片上传异常: {e}")
         return None
 
 
@@ -296,6 +317,7 @@ def main():
     parser.add_argument("--digest", help="文章摘要（默认自动提取）")
     parser.add_argument("--source-url", help="原文链接")
     parser.add_argument("--cover", help="封面图片路径（可选）")
+    parser.add_argument("--body-images", nargs="*", help="正文图片路径列表，按顺序替换 BODY_IMG_1, BODY_IMG_2, ...")
     parser.add_argument("--update", help="更新已有草稿的 media_id")
     parser.add_argument("--index", type=int, default=0, help="多图文草稿中的索引（默认0）")
     args = parser.parse_args()
@@ -330,9 +352,40 @@ def main():
     with open(args.file, "r", encoding="utf-8") as f:
         md_content = f.read()
 
+    # 自动追加标准化结尾（如果文章还没包含的话）
+    footer_path = os.path.join(os.path.dirname(__file__), "wechat_footer.template.md")
+    if os.path.exists(footer_path):
+        with open(footer_path, "r", encoding="utf-8") as f:
+            footer = f.read().strip()
+        if footer not in md_content:
+            md_content = md_content.rstrip() + "\n\n" + footer
+            print("📝 已追加标准化结尾模板")
+
     # 提取信息
     title = args.title or extract_title(md_content, args.file)
     digest = args.digest or extract_digest(md_content)
+
+    # 获取 access_token
+    token = get_access_token(APP_ID, APP_SECRET)
+    if not token:
+        sys.exit(1)
+
+    # 上传正文图片（可选），替换 md 中的 BODY_IMG_1/2/3 等占位符
+    body_image_map = {}
+    if args.body_images:
+        print(f"📤 正在上传 {len(args.body_images)} 张正文图片...")
+        for i, img_path in enumerate(args.body_images, start=1):
+            placeholder = f"BODY_IMG_{i}"
+            if os.path.exists(img_path):
+                url = upload_body_image(token, img_path)
+                if url:
+                    body_image_map[placeholder] = url
+            else:
+                print(f"⚠️ 正文图片不存在，跳过: {img_path}")
+    for placeholder, url in body_image_map.items():
+        md_content = md_content.replace(placeholder, url)
+        print(f"   ↳ 替换 {placeholder} → {url}")
+
     html_content = markdown_to_wechat_html(md_content)
 
     print(f"📄 文章: {title}")
@@ -340,16 +393,11 @@ def main():
     print(f"📝 摘要: {digest[:60]}...")
     print(f"📏 正文长度: {len(html_content)} 字符（HTML）")
 
-    # 获取 access_token
-    token = get_access_token(APP_ID, APP_SECRET)
-    if not token:
-        sys.exit(1)
-
     # 上传封面（可选）
     thumb_id = ""
     if args.cover:
         print("📤 正在上传封面图片...")
-        thumb_id = upload_image(token, args.cover) or ""
+        thumb_id = upload_cover(token, args.cover) or ""
 
     # 创建或更新草稿
     if args.update:

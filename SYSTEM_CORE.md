@@ -105,6 +105,20 @@ git add . && git commit -m "feat: ..." && git push
 □ 如有交接 → 写 brain/handoff/ 包（create-handoff.mjs）
 □ 记录 brain/context-log.json（log-session.mjs）
 □ 如有新决策 → 更新 brain/decisions.json
+
+□ ——以下为"进步循环"三步—— »
+
+□ 第一步：回顾今天学到了什么
+   - 打开了什么新认知？
+   - 犯了什么错？怎么改的？
+   - 什么方法效果好，值得复制？
+□ 第二步：固化到系统
+   - 新规则 → brain/decisions.json
+   - 新偏好 → brain/user-preferences.json
+   - 新流程 → 对应的工作流文档
+□ 第三步：追加进步日志
+   - 写入 _templates/进步日志.md
+   - 一句话总结：今天比昨天好在哪里？
 ```
 
 ---
@@ -120,6 +134,8 @@ git add . && git commit -m "feat: ..." && git push
 | 2026-06-14 | v3.1 | 🔥 双工具闭环跑通（workflow-协议.md）|
 | 2026-06-14 | v3.2 | 🔥 WeChat图片管线升级（wechat_inline_upload.py）|
 | 2026-06-14 | v3.3 | 🔥 SYSTEM_CORE.md 固化系统建立 |
+| 2026-06-14 | v3.4 | 🔥 "进步循环"三步机制建立（回顾→固化→日志） |
+| 2026-06-14 | v3.5 | 🔥 内容表现跟踪体系（metrics.json + Web Analytics） |
 
 ---
 
