@@ -16,3 +16,40 @@
 [2026-06-16 00:07:34] ✅ 同步: +1 跳过 52
 [2026-06-16 00:10:41] === 知识库→网站 同步开始 ===
 [2026-06-16 00:10:42] ✅ 同步: +0 跳过 53
+[2026-06-16 00:25:13] === 知识库→网站 同步开始 ===
+[2026-06-16 00:25:14]   ✓ AI/_深化_2026-06-16_中国AI编程PMF.md
+[2026-06-16 00:25:14]   ✓ AI/_深化_2026-06-16_中国AI推理芯片量产进度.md
+[2026-06-16 00:25:14]   ✓ AI/_深化_2026-06-16_电力调度AI与Agent.md
+[2026-06-16 00:25:15]   ✓ 算电协同/_深化_2026-06-16_算电协同模式与投资收益.md
+[2026-06-16 00:25:15] ✅ 同步: +4 跳过 45
+[2026-06-16 00:25:15] 🚀 检测到 4 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+
+
+(!) Found dead link ./../%E4%B8%80%E7%BA%A7%E5%B8%82%E5%9C%BA%E4%BC%B0%E5%80%BC%E5%9F%BA%E5%87%86 in file 电力新能源/赛道总览.md
+(!) Found dead link ./../%E5%BD%93%E5%89%8D%E5%85%B3%E6%B3%A8 in file 电力新能源/赛道总览.md
+
+If this is expected, you can disable this check via config. Refer: https://vitepress.dev/reference/site-config#ignoredeadlinks
+
+x Build failed in 1.11s
+[31m✖[0m building client + server bundles...
+build error:
+[vitepress] 2 dead link(s) found.
+[vitepress] 2 dead link(s) found.
+    at Object.renderStart (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:45027:15)
+    at file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/rollup/dist/es/shared/node-entry.js:23002:40
+    at async Promise.all (index 0)
+    at async PluginDriver.hookParallel (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/rollup/dist/es/shared/node-entry.js:22912:9)
+    at async Bundle.generate (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/rollup/dist/es/shared/node-entry.js:21037:13)
+    at async file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/rollup/dist/es/shared/node-entry.js:23989:27
+    at async catchUnfinishedHookActions (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/rollup/dist/es/shared/node-entry.js:23356:16)
+[2026-06-16 00:25:16]   ⚠️ VitePress 构建失败
+[2026-06-16 16:20:35] === 知识库→网站 同步开始 ===
+[2026-06-16 16:20:35] === 知识库→网站 同步开始 ===

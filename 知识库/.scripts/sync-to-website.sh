@@ -78,8 +78,8 @@ if [ "$sync" -gt 0 ]; then
   if npm run build >> "$LOG_FILE" 2>&1; then
     log "  ✓ VitePress 构建成功"
     
-    # 部署到 Vercel
-    if npx vercel deploy docs/.vitepress/dist --prod --yes --project knowledge-base-site >> "$LOG_FILE" 2>&1; then
+    # 部署到 Vercel (从项目根目录部署, vercel.json 中 framework=null 跳过 npm install)
+    if npx vercel deploy --prod --yes --project knowledge-base-site >> "$LOG_FILE" 2>&1; then
       log "  ✓ Vercel 部署成功 → https://knowledge-base-site-iota.vercel.app"
     else
       log "  ⚠️ Vercel 部署失败（可手动重试）"
