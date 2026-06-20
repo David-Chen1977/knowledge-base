@@ -1,25 +1,5 @@
-# OS files
-.DS_Store
-Thumbs.db
-
-# Node
 node_modules/
-
-# Logs
-*.log
-
-# Build output
-.vitepress/dist/
 .vitepress/cache/
+.DS_Store
+*.log
 .vercel
-
-# API secrets
-scripts/.env
-
-# Output cache
-三件套输出/*.pptx
-三件套输出/*.png
-三件套输出/*.jpg
-
-# Temp
-_archive/

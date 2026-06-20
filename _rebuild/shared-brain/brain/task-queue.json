@@ -1,6 +1,0 @@
-{
-  "version": 1,
-  "description": "双工具共享任务队列。OpenCode 向此队列添加任务，WorkBuddy 取出并执行。",
-  "tasks": [],
-  "lastUpdated": "2026-06-14T23:00:00.000Z"
-}

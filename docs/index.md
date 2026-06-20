@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: 能源赛道知识库
-  text: 新能源 · 算电协同 · AI
+  name: 算电协同 · AI算力 · 电力新能源
+  text: 投资研究驱动的结构化知识体系
   tagline: 投资研究驱动的结构化知识体系 — 每日跟踪、深度研究、交叉验证
   image:
     src: /hero.svg

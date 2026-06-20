@@ -1,1 +1,0 @@
-/Volumes/移动硬盘/wiki-update.mjs

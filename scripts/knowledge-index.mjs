@@ -1,1 +1,0 @@
-/Volumes/移动硬盘/knowledge-index.mjs
