@@ -352,3 +352,106 @@ build complete in 1.92s.
  create mode 100644 docs/index.md
 fatal: unable to access 'https://github.com/David-Chen1977/knowledge-base.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
 [2026-06-23 23:19:56]   ⚠️ git push 失败
+[2026-06-23 23:35:05] === vault → 网站 同步 v4 ===
+[2026-06-23 23:35:05] ▶ 运行 visibility 检查...
+📄 扫描到 141 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 138 已正确, 0 已更新, 0 错误
+[2026-06-23 23:35:05] ▶ 收集公开文件...
+[2026-06-23 23:35:06]   ✓ 人机协同/AI协作系统构建实录.md
+[2026-06-23 23:35:06]   ✓ 🏠 首页.md
+[2026-06-23 23:35:06] ✅ 同步: +2 更新 / 139 跳过
+[2026-06-23 23:35:06] 🚀 检测到 2 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+x Build failed in 150ms
+[31m✖[0m building client + server bundles...
+build error:
+[vitepress] duplicated mapping key at line 7, column 1:
+    visibility: private
+    ^
+file: /Users/Admin/OpencodeWorkspace/知识库网站/docs/人机协同/AI协作系统构建实录.md
+[vitepress] duplicated mapping key at line 7, column 1:
+    visibility: private
+    ^
+file: /Users/Admin/OpencodeWorkspace/知识库网站/docs/人机协同/AI协作系统构建实录.md
+    at generateError (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:20079:11)
+    at throwError (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:20085:10)
+    at storeMappingPair (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:20247:8)
+    at readBlockMapping (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21010:10)
+    at composeNode (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21271:13)
+    at readDocument (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21437:4)
+    at loadDocuments (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21500:6)
+    at load (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21526:20)
+    at Object.safeLoad (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:21549:11)
+    at parse$2 (file:///Users/Admin/OpencodeWorkspace/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%BD%91%E7%AB%99/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:22878:18)
+[2026-06-23 23:35:07]   ⚠️ VitePress 构建失败
+[2026-06-23 23:35:45] === vault → 网站 同步 v4 ===
+[2026-06-23 23:35:45] ⚠️ 上次构建失败: 2026-06-23 23:35:07
+[2026-06-23 23:35:45] ▶ 运行 visibility 检查...
+📄 扫描到 141 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/AI协作系统构建实录.md: public → 应为 private
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 137 已正确, 0 已更新, 0 错误
+[2026-06-23 23:35:45] ▶ 收集公开文件...
+[2026-06-23 23:35:46] ✅ 同步: +0 更新 / 141 跳过
+[2026-06-23 23:35:52] === vault → 网站 同步 v4 ===
+[2026-06-23 23:35:52] ⚠️ 上次构建失败: 2026-06-23 23:35:07
+[2026-06-23 23:35:52] ▶ 运行 visibility 检查...
+📄 扫描到 141 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/AI协作系统构建实录.md: public → 应为 private
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 137 已正确, 0 已更新, 0 错误
+[2026-06-23 23:35:52] ▶ 收集公开文件...
+[2026-06-23 23:35:52]   ✓ 人机协同/AI协作系统构建实录.md
+[2026-06-23 23:35:53] ✅ 同步: +1 更新 / 140 跳过
+[2026-06-23 23:35:53] 🚀 检测到 1 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 1.95s.
+[2026-06-23 23:35:55]   ✓ VitePress 构建成功
+[2026-06-23 23:35:55]   ▶ 清理已撤销公开的文件...
+[main 14f70ce] auto-sync: vault内容同步 2026-06-23 23:35
+ 85 files changed, 236 insertions(+), 251 deletions(-)
+ delete mode 100644 docs/.vitepress/dist/assets/app.CE3Lb1zD.js
+ delete mode 100644 docs/.vitepress/dist/assets/chunks/@localSearchIndexroot.DIB5k6HZ.js
+ delete mode 100644 docs/.vitepress/dist/assets/chunks/VPLocalSearchBox.CQPYch8b.js
+ delete mode 100644 docs/.vitepress/dist/assets/chunks/theme.CJGcyOFS.js
+ delete mode 100644 docs/.vitepress/dist/assets/index.md.CTlWct0n.js
+ delete mode 100644 docs/.vitepress/dist/assets/index.md.CTlWct0n.lean.js
+To https://github.com/David-Chen1977/knowledge-base.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/David-Chen1977/knowledge-base.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-06-23 23:35:57]   ⚠️ git push 失败
