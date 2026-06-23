@@ -32,13 +32,19 @@ import { resolveVideoQuality, buildHyperFramesArgs, TIERS } from './video-qualit
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DOCS = __dirname;
-const OUTPUT_DIR = join(DOCS, 'OpenCode生成文件');
+const OUTPUT_DIR = '/Users/Admin/三件套输出';
 const BATCH_ROOT = join(DOCS, '生产批次');
 const WECHAT_PUBLISHER = join(DOCS, 'wechat-publisher');
 const KNOWLEDGE_INDEX = join(DOCS, 'knowledge-index.mjs');
 const PPT_PREFLIGHT = join(DOCS, 'ppt-preflight.py');
 const GEN_PERSONAL_TEMPLATE = join(DOCS, 'gen_personal_template.py');
 const AI_PPTX_PIPELINE = join(DOCS, 'ai_pptx_pipeline.py');
+const CONTENT_TO_DECK = join(DOCS, 'content-to-deck.mjs');
+const SKILL_SCRIPTS = '/Users/Admin/.opencode/skills/nmg-ppt/scripts';
+const NATIVE_PPTX = join(SKILL_SCRIPTS, 'native_pptx.py');
+const MOVIEPY_STITCH = join(SKILL_SCRIPTS, 'moviepy_stitch.py');
+const PLAYWRIGHT_VIDEO = join(SKILL_SCRIPTS, 'playwright_html_video.py');
+const PPTX_VENV = '/tmp/pptx-venv/bin/python3';
 const VIDEO_HYPERFRAMES = join(DOCS, 'video-hyperframes.mjs');
 const INGEST_SCRIPT = join(DOCS, 'ingest-research.mjs');
 const RESEARCH_TO_BUNDLE = join(DOCS, 'research-to-bundle.mjs');
@@ -432,48 +438,58 @@ function resolveBundleFiles(bundle, batchDir, types) {
 
 // ── 阶段: 调用 PPT 生成 ──
 
-function generatePPT(topic, batchDir, configPath, preview, template = 'personal') {
+function generatePPT(topic, batchDir, configPath, preview, template = 'nmg') {
   log('🎨', `生成 PPT（模版: ${template}）...`);
 
-  // 优先使用 bundle JSON（包含完整内容），其次 article.md
+  // 优先使用 bundle JSON
   const bundleJson = (() => {
     try {
-      const dir = batchDir || configPath ? dirname(configPath) : batchDir;
-      const files = readdirSync(batchDir).filter(f => f.endsWith('.bundle.json'));
-      return files.length > 0 ? join(batchDir, files[0]) : null;
+      if (batchDir && existsSync(batchDir)) {
+        const files = readdirSync(batchDir).filter(f => f.endsWith('.bundle.json'));
+        return files.length > 0 ? join(batchDir, files[0]) : null;
+      }
+      return null;
     } catch { return null; }
   })();
-  const articlePath = join(batchDir, 'article.md');
-  const pipeline = findScript('ppt_to_video.py');
+  const articlePath = join(batchDir || '.', 'article.md');
 
-  if (!existsSync(pipeline)) {
-    log('⚠️', 'ppt_to_video.py 不存在，跳过 PPT');
+  if (!existsSync(CONTENT_TO_DECK)) {
+    log('⚠️', 'content-to-deck.mjs 不存在，跳过 PPT');
     return null;
   }
 
-  if (preview) { log('👁️', 'PPT 预览模式'); return articlePath; }
+  if (preview) {
+    log('👁️', 'PPT 预览模式');
+    // Still generate deck for preview inspection
+    const slug = slugify(topic);
+    if (bundleJson) {
+      runCmd(`node "${CONTENT_TO_DECK}" --bundle "${bundleJson}" --theme "${template}" --deck-only`);
+    } else if (existsSync(articlePath)) {
+      runCmd(`node "${CONTENT_TO_DECK}" --topic "${topic}" --article "${articlePath}" --theme "${template}" --deck-only`);
+    }
+    return articlePath;
+  }
 
   const slug = slugify(topic);
-  const out = join(OUTPUT_DIR, `${slug}.pptx`);
+  const outPptx = join(SANJITAO_DIR, `${slug}_PPT.pptx`);
+  mkdirSync(SANJITAO_DIR, { recursive: true });
+
   let cmd;
   if (bundleJson) {
-    cmd = `python3 "${pipeline}" --bundle "${bundleJson}" --slides-only`;
+    cmd = `node "${CONTENT_TO_DECK}" --bundle "${bundleJson}" --theme "${template}" --output "${outPptx}" --preview`;
   } else if (existsSync(articlePath)) {
-    cmd = `python3 "${pipeline}" --article "${articlePath}" --title "${topic}" --slides-only`;
+    cmd = `node "${CONTENT_TO_DECK}" --topic "${topic}" --article "${articlePath}" --theme "${template}" --output "${outPptx}" --preview`;
   } else {
     log('⚠️', '无可用内容源（bundle/article），跳过 PPT');
     return null;
   }
 
-  const r = runCmd(cmd);
-  if (r.ok) {
-    // ppt_to_video.py 输出在 OUTPUT_DIR，需要找到对应文件
-    const candidates = readdirSync(OUTPUT_DIR).filter(f => f.includes(slug) && f.endsWith('.pptx'));
-    const pptx = candidates.length > 0 ? join(OUTPUT_DIR, candidates[0]) : out;
-    log('✅', `PPT 已生成: ${pptx}`);
-    return pptx;
+  const r = runCmd(cmd, { timeout: 120000 });
+  if (r.ok && existsSync(outPptx)) {
+    log('✅', `PPT 已生成: ${outPptx}`);
+    return outPptx;
   }
-  log('❌', `PPT 生成失败: ${r.stderr?.slice(0, 200) || r.error}`);
+  log('❌', `PPT 生成失败: ${r.stderr?.slice(0, 300) || r.error}`);
   return null;
 }
 
@@ -531,41 +547,59 @@ function generateArticle(topic, batchDir, articlePath, preview, publish) {
 function generateVideo(topic, batchDir, scriptPath, preview, videoQuality = 'A') {
   log('🎬', `生成视频（质量等级: ${videoQuality}）...`);
 
-  const pipeline = findScript('ppt_to_video.py');
-  if (!existsSync(pipeline)) {
-    log('⚠️', 'ppt_to_video.py 不存在，跳过视频');
-    return null;
-  }
-
+  // Layer 1: Use moviepy_stitch.py to create slide-based video
+  // First ensure we have preview PNGs from the PPT pipeline
+  const slug = slugify(topic);
+  const pptxPreviewDir = join(SANJITAO_DIR, slug, 'preview');
   const bundleJson = (() => {
     try {
-      const files = readdirSync(batchDir).filter(f => f.endsWith('.bundle.json'));
-      return files.length > 0 ? join(batchDir, files[0]) : null;
+      if (batchDir && existsSync(batchDir)) {
+        const files = readdirSync(batchDir).filter(f => f.endsWith('.bundle.json'));
+        return files.length > 0 ? join(batchDir, files[0]) : null;
+      }
+      return null;
     } catch { return null; }
   })();
-  const articlePath = join(batchDir, 'article.md');
 
-  if (preview) { log('👁️', '视频预览模式'); return articlePath; }
+  if (preview) { log('👁️', '视频预览模式'); return scriptPath; }
 
-  let cmd;
-  if (bundleJson) {
-    cmd = `python3 "${pipeline}" --bundle "${bundleJson}"`;
-  } else if (existsSync(articlePath)) {
-    cmd = `python3 "${pipeline}" --article "${articlePath}" --title "${topic}"`;
-  } else {
-    log('⚠️', '无可用内容源，跳过视频');
+  // Priority 1: Use moviepy_stitch.py with preview PNGs
+  if (existsSync(MOVIEPY_STITCH) && existsSync(pptxPreviewDir)) {
+    const pngs = readdirSync(pptxPreviewDir).filter(f => f.startsWith('slide_') && f.endsWith('.png'));
+    if (pngs.length > 0) {
+      const outputMp4 = join(SANJITAO_DIR, `翻页视频_${slug}.mp4`);
+      const cmd = `"${PPTX_VENV}" "${MOVIEPY_STITCH}" --preview-dir "${pptxPreviewDir}" --output "${outputMp4}" --duration 5 --transition 0.5 --tts --lang zh`;
+      log('🔄', `  使用 moviepy_stitch.py 合成视频...`);
+      const r = runCmd(cmd, { timeout: 600000 });
+      if (r.ok && existsSync(outputMp4)) {
+        log('✅', `视频已生成: ${outputMp4}`);
+        return outputMp4;
+      }
+      log('⚠️', 'moviepy_stitch 失败，尝试 HyperFrames...');
+    }
+  }
+
+  // Priority 2: HyperFrames pipeline (existing)
+  if (!existsSync(VIDEO_HYPERFRAMES)) {
+    log('⚠️', 'video-hyperframes.mjs 不存在，跳过视频');
     return null;
   }
 
-  const r = runCmd(cmd, { timeout: 600000 });
-  if (r.ok) {
-    const slug = slugify(topic);
-    const candidates = readdirSync(OUTPUT_DIR).filter(f => f.includes('翻页视频') && f.includes(slug) && f.endsWith('.mp4'));
-    const mp4 = candidates.length > 0 ? join(OUTPUT_DIR, candidates[0]) : join(OUTPUT_DIR, `翻页视频_${slug}.mp4`);
-    log('✅', `视频已生成: ${mp4}`);
-    return mp4;
+  if (!scriptPath || !existsSync(scriptPath)) {
+    // Try to find/create a video script from bundle or article
+    const articlePath = join(batchDir, 'article.md');
+    if (!existsSync(articlePath) && !bundleJson) {
+      log('⚠️', '无可用内容源，跳过视频');
+      return null;
+    }
   }
-  log('❌', `视频生成失败: ${r.stderr?.slice(0, 200) || r.error}`);
+
+  const result = callHyperFrames(topic, scriptPath, batchDir, videoQuality);
+  if (result.ok && result.path) {
+    log('✅', `视频已生成: ${result.path}`);
+    return result.path;
+  }
+  log('❌', `视频生成失败`);
   return null;
 }
 
