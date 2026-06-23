@@ -6,3 +6,23 @@ node_modules/
 .vercel
 *.bak
 *.old
+
+# API secrets
+scripts/.env
+
+# Output cache
+三件套输出/*.pptx
+三件套输出/*.png
+三件套输出/*.jpg
+
+# Temp
+_archive/
+
+# 独立 git repo（知识库网站）
+知识库网站/
+
+# workspace root docs 指向 知识库网站/docs/ 的符号链接
+docs/
+
+# Obsidian workspace
+.obsidian/
