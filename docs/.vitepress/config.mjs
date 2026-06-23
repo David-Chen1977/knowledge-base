@@ -99,6 +99,7 @@ export default defineConfig({
           text: '深度研究',
           collapsed: false,
           items: [
+            { text: '【新】算电协同"不可能三角"', link: '/算电协同/算电协同不可能三角' },
             { text: '【新】GPU集群全链路瓶颈拆解', link: '/算电协同/GPU集群全链路瓶颈拆解' },
             { text: '【新】AI数据中心电力瓶颈', link: '/算电协同/数据中心电力瓶颈_从GPU缺货到变压器缺货' },
             { text: '【新】算电协同上升国家战略', link: '/算电协同/算电协同上升国家战略_投资者需要知道的七件事' },
