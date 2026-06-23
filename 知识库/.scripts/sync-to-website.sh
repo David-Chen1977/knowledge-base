@@ -94,13 +94,13 @@ if [ "$sync" -gt 0 ]; then
     log "  ▶ 清理已撤销公开的文件..."
     while IFS= read -r -d '' old_file; do
       old_rel="${old_file#$SITE_DOCS/}"
-      # 检查是否还在 vault 中标记为 public
-      vault_candidates=$(find "$VAULT" -name "$(basename "$old_file")" -type f 2>/dev/null)
+      # 检查是否还在 vault 中标记为 public（处理空格文件名）
       still_public=false
-      for vf in $vault_candidates; do
+      while IFS= read -r -d '' vf; do
+        [ -f "$vf" ] || continue
         vis=$(head -20 "$vf" | grep -m1 '^visibility:' | sed 's/^visibility: *//; s/ *$//')
         [ "$vis" = "public" ] && still_public=true && break
-      done
+      done < <(find "$VAULT" -name "$(basename "$old_file")" -type f -print0 2>/dev/null)
       if [ "$still_public" = false ]; then
         rm -f "$old_file"
         log "  🗑 移除 $old_rel (已不再公开)"
