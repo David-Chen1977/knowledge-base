@@ -1,3 +1,7 @@
+---
+updated: 2026-06-23
+visibility: public
+---
 # 产出回流 · 2026-06-03
 
 **来源:** /Volumes/移动硬盘/生产批次/2026-06-03_户用储能市场分析/03-illustration-shotlist.prompt.md
