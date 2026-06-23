@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '算电协同·AI算力投资知识库',
-  description: '新能源·算电协同·AI · 投资研究知识库',
+  title: '算电协同-算力投资知识库',
+  description: '算电协同 · 算力投资 · 新能源 · AI · 投资研究知识库',
   lastUpdated: true,
   cleanUrls: true,
 
@@ -13,7 +13,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: '算电协同·AI算力投资知识库',
+    siteTitle: '算电协同-算力投资知识库',
 
     nav: [
       { text: '首页', link: '/' },
