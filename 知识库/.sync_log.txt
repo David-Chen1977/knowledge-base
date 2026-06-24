@@ -666,3 +666,47 @@ To https://github.com/David-Chen1977/knowledge-base.git
 [2026-06-24 21:39:20] ▶ 收集公开文件...
 [2026-06-24 21:39:21] ✅ 同步: +0 更新 / 143 跳过
 [2026-06-24 21:39:21] ✅ 同步: +0 更新 / 143 跳过
+[2026-06-24 22:39:22] === vault → 网站 同步 v4 ===
+[2026-06-24 22:39:22] === vault → 网站 同步 v4 ===
+[2026-06-24 22:39:22] ▶ 运行 visibility 检查...
+[2026-06-24 22:39:22] ▶ 运行 visibility 检查...
+📄 扫描到 146 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/AI协作系统构建实录.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/PPT管线修复的人机协同实践.md: public → 应为 private
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 141 已正确, 0 已更新, 0 错误
+[2026-06-24 22:39:22] ▶ 收集公开文件...
+[2026-06-24 22:39:22] ▶ 收集公开文件...
+[2026-06-24 22:39:22]   ✓ 电改2.0进度地图_网站深度版.md
+[2026-06-24 22:39:22]   ✓ 电改2.0进度地图_网站深度版.md
+[2026-06-24 22:39:22]   ✓ 电改2.0进度地图_公众号版.md
+[2026-06-24 22:39:22]   ✓ 电改2.0进度地图_公众号版.md
+[2026-06-24 22:39:23] ✅ 同步: +2 更新 / 144 跳过
+[2026-06-24 22:39:23] ✅ 同步: +2 更新 / 144 跳过
+[2026-06-24 22:39:23] 🚀 检测到 2 个文件更新，触发网站重新部署...
+[2026-06-24 22:39:23] 🚀 检测到 2 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 5.09s.
+[2026-06-24 22:39:31]   ✓ VitePress 构建成功
+[2026-06-24 22:39:31]   ✓ VitePress 构建成功
+[2026-06-24 22:39:31]   ▶ 清理已撤销公开的文件...
+[2026-06-24 22:39:31]   ▶ 清理已撤销公开的文件...
+[main b58aeda] auto-sync: vault内容同步 2026-06-24 22:39
+ 79 files changed, 234 insertions(+), 234 deletions(-)
+fatal: unable to access 'https://github.com/David-Chen1977/knowledge-base.git/': Recv failure: Operation timed out
+[2026-06-24 22:41:34]   ⚠️ git push 失败
+[2026-06-24 22:41:34]   ⚠️ git push 失败
