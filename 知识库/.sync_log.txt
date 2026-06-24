@@ -710,3 +710,58 @@ build complete in 5.09s.
 fatal: unable to access 'https://github.com/David-Chen1977/knowledge-base.git/': Recv failure: Operation timed out
 [2026-06-24 22:41:34]   ⚠️ git push 失败
 [2026-06-24 22:41:34]   ⚠️ git push 失败
+[2026-06-24 23:41:43] === vault → 网站 同步 v4 ===
+[2026-06-24 23:41:43] === vault → 网站 同步 v4 ===
+[2026-06-24 23:41:43] ⚠️ 上次部署失败: 2026-06-24 22:41:34
+[2026-06-24 23:41:43] ⚠️ 上次部署失败: 2026-06-24 22:41:34
+[2026-06-24 23:41:44] ▶ 运行 visibility 检查...
+[2026-06-24 23:41:44] ▶ 运行 visibility 检查...
+📄 扫描到 147 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/AI协作系统构建实录.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/PPT管线修复的人机协同实践.md: public → 应为 private
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 142 已正确, 0 已更新, 0 错误
+[2026-06-24 23:41:49] ▶ 收集公开文件...
+[2026-06-24 23:41:49] ▶ 收集公开文件...
+[2026-06-24 23:41:50]   ✓ 电改2.0进度地图_公众号版.md
+[2026-06-24 23:41:50]   ✓ 电改2.0进度地图_公众号版.md
+[2026-06-24 23:41:50]   ✓ 算电协同/_回流_2026-06-24_电改2.0进度地图.md
+[2026-06-24 23:41:50]   ✓ 算电协同/_回流_2026-06-24_电改2.0进度地图.md
+[2026-06-24 23:41:51]   ✓ 电力新能源/电力市场/赛道文件.md
+[2026-06-24 23:41:51]   ✓ 电力新能源/电力市场/赛道文件.md
+[2026-06-24 23:41:52] ✅ 同步: +3 更新 / 144 跳过
+[2026-06-24 23:41:52] ✅ 同步: +3 更新 / 144 跳过
+[2026-06-24 23:41:52] 🚀 检测到 3 个文件更新，触发网站重新部署...
+[2026-06-24 23:41:52] 🚀 检测到 3 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 7.47s.
+npm notice
+npm notice New minor version of npm available! 11.16.0 -> 11.17.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+npm notice To update run: npm install -g npm@11.17.0
+npm notice
+[2026-06-24 23:42:03]   ✓ VitePress 构建成功
+[2026-06-24 23:42:03]   ✓ VitePress 构建成功
+[2026-06-24 23:42:03]   ▶ 清理已撤销公开的文件...
+[2026-06-24 23:42:03]   ▶ 清理已撤销公开的文件...
+[main 821e709] auto-sync: vault内容同步 2026-06-24 23:42
+ 82 files changed, 277 insertions(+), 247 deletions(-)
+ delete mode 100644 "docs/.vitepress/dist/assets/\347\224\265\345\212\233\346\226\260\350\203\275\346\272\220_\347\224\265\345\212\233\345\270\202\345\234\272_\350\265\233\351\201\223\346\226\207\344\273\266.md.DfoVTXYq.js"
+ delete mode 100644 "docs/.vitepress/dist/assets/\347\224\265\345\212\233\346\226\260\350\203\275\346\272\220_\347\224\265\345\212\233\345\270\202\345\234\272_\350\265\233\351\201\223\346\226\207\344\273\266.md.DfoVTXYq.lean.js"
+fatal: unable to access 'https://github.com/David-Chen1977/knowledge-base.git/': Error in the HTTP2 framing layer
+[2026-06-24 23:43:41]   ⚠️ git push 失败
+[2026-06-24 23:43:41]   ⚠️ git push 失败
