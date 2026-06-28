@@ -1,7 +1,7 @@
 # ⚠️ 开机必读 · SYSTEM CORE
 
 > 此文件记录所有已经固化的优化和迭代。任何会话开始时**必须先读此文件**。
-> 读完去读 `brain/decisions.json` 获取完整决策日志。
+> 读完去读 `_session_state.md` + `vault/10-知识库/当前关注.md` 获取当前状态。
 
 ---
 
@@ -66,7 +66,7 @@
 │  2. 个人网站 (Astro → Cloudflare Pages)                   │
 │     博客文章/个人品牌                                      │
 │                                                          │
-│  3. 公众号 (WeChat 通过 publish.sh)                        │
+│  3. 公众号 (WeChat 通过 wenyan-mcp)                        │
 │     深度文章推送                                           │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -91,19 +91,37 @@ sync-to-website.sh v4 不再使用关键词黑名单，
 # 检查 3 个仓库状态 + 构建状态 + 部署标记 + 日志时效 + 备份状态
 ```
 
+### 自动运维架构 (v5 — 2026-06-28 重构)
+
+```
+统一编排器 (orchestrator.sh) — launchd 9:00 / 21:00
+  │
+  ├─ Step 1: refresh-kb.mjs v5
+  │   ├─ 基线数据（自包含，无外部依赖）
+  │   └─ 可选碳市场数据 (--populate-ets)
+  │
+  ├─ Step 2: sync-to-website.sh v5 (状态门: Step 1 成功才执行)
+  │   └─ vault visibility:public → 知识库网站 → Vercel
+  │
+  └─ Step 3: auto-save.sh (无论前两步结果)
+```
+
+**关键变更** (2026-06-28):
+- `refresh-kb.mjs` v5: 移除已删除 china-energy-mcp 硬编码 import，改用嵌入式基线数据
+- `refresh-all.sh` v5: 添加 macOS Notification Center 失败告警 + 连续失败计数 + 状态门
+- `sync-to-website.sh` v5: 启动时自动清理残留失败标记
+- 新 `orchestrator.sh`: 统一编排器取代 2 个旧 launchd 任务（refresh + syncwebsite）
+- `nmg-ppt` SKILL.md: 模板配置自包含，移除移动硬盘依赖
+
 ### 发布管线
 
-#### 内容发布（publish.sh）
-```
-./三件套输出/publish.sh <编号>              # 发布三件套
-./三件套输出/publish.sh validate <编号>      # 质量校验
-./三件套输出/publish.sh preview <编号>       # 本地预览
-./三件套输出/publish.sh batch 01 03 05       # 批量发布
-./三件套输出/publish.sh rollback <编号>       # 版本回滚
+#### 内容发布
 
-# 凭据从 macOS Keychain 读取
-# 配置在 三件套输出/publish.config
-```
+发布方式：
+
+1. **公众号** → 通过 `wenyan-mcp` 发布到草稿箱（凭据从 macOS Keychain 读取）
+2. **网站** → `orchestrator.sh` 自动同步或手动 `deploy.sh`
+3. **PPT** → `nmg-ppt` 管线（脚本在 `.opencode/skills/nmg-ppt/scripts/`）
 
 #### 网站部署
 ```
@@ -115,9 +133,9 @@ git add . && git commit -m "feat: ..." && git push
 
 ---
 
-## 三、PPT 模板（已定稿 · 禁止重建）
+## 附 A、PPT 模板（已定稿 · 禁止重建）
 
-**汇竑资本/公司模板**：`三件套输出/gen_pptx_huihong.py`
+**汇竑资本/公司模板**：`nmg-ppt` 管线（脚本在 `/Users/Admin/.opencode/skills/nmg-ppt/`）
 - 规格文档：`知识库/汇竑资本PPT模板规格.md`
 - 质量检查：`知识库/PPT质量检查标准.md`
 - 定稿时间：2026-06-14（用户最终确认）
@@ -125,28 +143,25 @@ git add . && git commit -m "feat: ..." && git push
 
 ---
 
-## 四、工具协同（2026-06-22 更新）
+## 四、工具协同（2026-06-25 更新 — WorkBuddy 已退役）
 
-### 当前状态：OpenCode 独立运作
-> WorkBuddy 协同链路于 2026-06-22 正式退役。
-> 原因：心跳停顿 + handoff 断裂 8 天 + OpenCode subagent 已覆盖全部功能。
-> WorkBuddy 进程保留用于其他用途。
+> WorkBuddy 于 2026-06-22 正式退役。所有职责已由 OpenCode subagent 吸收。
+> `brain/`、`context/`、`三件套输出/` 相关路径已全部清理。
 
-### OpenCode 独立完成（原 WorkBuddy 职责已吸收）
+### OpenCode 工具链
 | 环节 | 工具 |
 |:-----|:-----|
 | 核心内容写作 | OpenCode |
-| 数据查证 | OpenCode MCP (secedgar/yfinance/fred/prospector/china-energy) |
+| 数据查证 | OpenCode MCP (secedgar/yfinance/fred/prospector/china-ets/anysearch) |
 | 配图 | ChatGPT / 手动上传 |
 | 格式精修 | OpenCode subagent (deep/quick) |
-| 网站部署 | OpenCode (publish.sh --web-only) |
-| 公众号推送 | OpenCode (publish.sh --wechat-only) |
-| PPT生成 | OpenCode (gen_pptx_huihong.py) |
+| 网站部署 | `deploy.sh` → Cloudflare Pages |
+| 公众号推送 | `wenyan-mcp` 发布到草稿箱 |
+| PPT生成 | `nmg-ppt` 管线 |
 | 归档 | OpenCode (knowledge-reflux) |
 
 ### 备份
 ```
-# 人机协同系统完整备份已存放于：
 /Volumes/移动硬盘/人机协同系统备份/
 ├── opencode/          (~/.opencode)      — 技能、规则
 ├── opencode-config/   (~/.config/opencode) — 配置数据
@@ -156,23 +171,15 @@ git add . && git commit -m "feat: ..." && git push
 一键恢复: cp -a /Volumes/移动硬盘/人机协同系统备份/opencode/ ~/.opencode/
 ```
 
-### 交接规范
-- 完成工作段 → 写 `brain/handoff/` 交接包（含对 WorkBuddy 的任务）
-- 更新 `context/state.json`
-- WorkBuddy 完成 → 写 handoff 回传
-- 协议详见 `brain/workflow-协议.md`
-
 ---
 
 ## 五、每次开机启动流程
 
 ```
-第1步（必须）: 读取 SYSTEM_CORE.md  ← 就是这个文件
-第2步（必须）: 读取 brain/decisions.json → 加载所有决策
-第3步（必须）: 读取 brain/user-preferences.json → 加载风格偏好
-第4步（建议）: 读取 brain/handoff/ 最新文件 → 检查有没有 WorkBuddy 的交接
-第5步（建议）: 读取 context/state.json → 当前管线状态
-第6步（可选）: 读取 brain/context-log.json 最后5条 → 最近操作
+第1步（必须）: 读取 SYSTEM_CORE.md                    ← 就是这个文件
+第2步（必须）: 读取 _session_state.md                  → 上次会话快照
+第3步（必须）: 读取 vault/10-知识库/当前关注.md          → 当前研究重点
+第4步（建议）: 读取 内容输出/ 下的最新产出               → 最近做了什么
 ```
 
 ---
@@ -180,11 +187,7 @@ git add . && git commit -m "feat: ..." && git push
 ## 六、会话结束强制操作
 
 ```
-□ 更新 context/state.json（sync-state.mjs）
-□ 如有交接 → 写 brain/handoff/ 包（create-handoff.mjs）
-□ 记录 brain/context-log.json（log-session.mjs）
-□ 如有新决策 → 更新 brain/decisions.json
-
+□ 更新 _session_state.md（generate-session-snapshot.py）
 □ ——以下为"进步循环"三步—— »
 
 □ 第一步：回顾今天学到了什么
@@ -192,11 +195,10 @@ git add . && git commit -m "feat: ..." && git push
    - 犯了什么错？怎么改的？
    - 什么方法效果好，值得复制？
 □ 第二步：固化到系统
-   - 新规则 → brain/decisions.json
-   - 新偏好 → brain/user-preferences.json
+   - 新规则 → 在当前关注.md 中追加
    - 新流程 → 对应的工作流文档
 □ 第三步：追加进步日志
-   - 写入 _templates/进步日志.md
+   - 写入 进步日志（如已配置）
    - 一句话总结：今天比昨天好在哪里？
 ```
 
@@ -216,6 +218,8 @@ git add . && git commit -m "feat: ..." && git push
 | 2026-06-14 | v3.4 | 🔥 "进步循环"三步机制建立（回顾→固化→日志） |
 | 2026-06-14 | v3.5 | 🔥 内容表现跟踪体系（metrics.json + Web Analytics） |
 | 2026-06-23 | v3.6 | 🔥 个人网站迁移本地 + 备份到移动硬盘 + .scripts/清理 + health-check 统一健康检查 |
+| 2026-06-25 | **v3.7** | 🔥 R0 止损：删除 brain/、三件套输出/、WorkBuddy 虚假路径引用；重写 §四/§五/§六；删除 3 个尸体脚本 |
+| 2026-06-28 | **v5** | 🔥 知识库刷新全面修复：refresh-kb.mjs v5 自包含基线数据；refresh-all.sh v5 告警+状态门；sync-to-website.sh v5 清理残留标记；新 orchestrator.sh 统一编排器取代2旧launchd；nmg-ppt SKILL.md 解除移动硬盘依赖；内容日历氢能重排 |
 
 ---
 
