@@ -3,7 +3,7 @@ title: 人机协同系统构建实录 — 从零搭建投资研究AI管线
 description: 如何用 OpenCode + WorkBuddy + whisper.cpp + 10个MCP服务，搭建覆盖 iPhone/Mac/微信/语音的全链路投资研究协作系统
 tags: [人机协同, AI自动化, 系统架构, 投资研究]
 updated: 2026-06-23
-visibility: private
+visibility: public
 ---
 
 

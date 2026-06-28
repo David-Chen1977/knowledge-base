@@ -105,7 +105,9 @@ function tryOcrSystemTesseract(imagePath) {
       log('OK  ', 'system tesseract: ' + text.length + '\u5b57');
       return text;
     }
-  } catch {}
+  } catch {
+    log('DBG', 'system tesseract 不可用，尝试下一方案');
+  }
   return '';
 }
 
@@ -140,7 +142,9 @@ function tryOcrMacosVision(imagePath) {
       log('OK  ', 'macOS Vision: ' + r.text.trim().length + '\u5b57');
       return r.text.trim();
     }
-  } catch {}
+  } catch {
+    log('DBG', 'macOS Vision OCR 失败');
+  }
   return '';
 }
 

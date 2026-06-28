@@ -1,0 +1,82 @@
+{
+  "initializedAt": "2026-06-22",
+  "lastScan": "2026-06-22",
+  "topics": [],
+  "covered": {},
+  "ignored": [],
+  "productionHistory": {},
+  "coverage": {
+    "charging": {
+      "name": "充电桩/重卡充电",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 0,
+      "productions": 0,
+      "total": 0,
+      "level": "low"
+    },
+    "power-market": {
+      "name": "电力市场/电力交易",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 5,
+      "productions": 4,
+      "total": 5,
+      "level": "high"
+    },
+    "AI-energy": {
+      "name": "AI+能源",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 6,
+      "productions": 4,
+      "total": 6,
+      "level": "high"
+    },
+    "carbon": {
+      "name": "双碳/碳中和",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 4,
+      "productions": 0,
+      "total": 4,
+      "level": "medium"
+    },
+    "fund": {
+      "name": "基金投资/一级市场",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 6,
+      "productions": 4,
+      "total": 6,
+      "level": "high"
+    },
+    "policy": {
+      "name": "政策研究",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 3,
+      "productions": 4,
+      "total": 3,
+      "level": "medium"
+    },
+    "suan-dian": {
+      "name": "算电协同",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 6,
+      "productions": 4,
+      "total": 6,
+      "level": "high"
+    },
+    "storage": {
+      "name": "储能/光储充",
+      "notes": 0,
+      "readings": 0,
+      "decisions": 4,
+      "productions": 0,
+      "total": 4,
+      "level": "medium"
+    }
+  }
+}

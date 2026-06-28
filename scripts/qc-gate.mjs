@@ -162,6 +162,155 @@ async function checkArticle(filePath) {
   return checks;
 }
 
+/**
+ * checkWechatArticle — 公众号文章 preflight 严格门禁
+ * 对应 公众号质量控制规范.md 六、发布前检查清单（15项）
+ */
+async function checkWechatArticle(filePath) {
+  const raw = readFileSync(filePath, 'utf-8');
+  const body = raw.replace(/---[\s\S]*?---\n?/, ''); // strip frontmatter
+  const lines = body.split('\n');
+  const text = lines.filter(l => !l.startsWith('![') && l.trim()).join('\n');
+  const pureChars = text.replace(/\s+/g, '').replace(/[>#*_\-|`]/g, '');
+  const charCount = [...pureChars].length;
+
+  // title from frontmatter or first H1
+  const fmTitle = raw.match(/^title:\s*(.+)/m);
+  const h1 = lines.find(l => /^#\s+\S/.test(l));
+  const title = fmTitle ? fmTitle[1].trim() : (h1 ? h1.replace(/^#\s*/, '').trim() : '');
+
+  // exaggerated words banlist
+  const BANNED_WORDS = ['疯狂', '震惊', '史诗', '百年一遇', '所有人都在忽视', '重磅', '突发', '紧急'];
+
+  const checks = [];
+
+  // 1. Title length ≤15
+  const titleOk = title.length > 0 && title.length <= 15;
+  checks.push({
+    test: '标题字数 ≤15',
+    status: titleOk ? '✅' : '❌',
+    detail: titleOk ? `${title.length}字` : `${title.length}字（超过15字）`,
+  });
+
+  // 2. No exaggerated words in title
+  const hasBanned = BANNED_WORDS.find(w => title.includes(w));
+  checks.push({
+    test: '标题无夸大词',
+    status: !hasBanned ? '✅' : '❌',
+    detail: hasBanned ? `含禁用词"${hasBanned}"` : '通过',
+  });
+
+  // 3. Word count 2000-3500
+  const wcOk = charCount >= 2000 && charCount <= 3500;
+  checks.push({
+    test: '正文字数 2000-3500',
+    status: wcOk ? '✅' : charCount < 2000 ? '❌' : '⚠️',
+    detail: `${charCount}字${charCount < 2000 ? '（不足2000）' : charCount > 3500 ? '（超过3500）' : ''}`,
+  });
+
+  // 4. Opening hook in first 200 chars (对话/场景/数据冲突)
+  const first200 = pureChars.slice(0, 200);
+  const hasHook = /[""「」“”']/.test(first200) ||       // dialogue
+    /上周|昨天|今天|刚才|几天前|一个/.test(first200) ||     // anecdote
+    /\d+%|\d+亿|\d+万|\d+千瓦/.test(first200);           // data impact
+  checks.push({
+    test: '开篇有钩子（场景/对话/数据）',
+    status: hasHook ? '✅' : '❌',
+    detail: hasHook ? '有' : '未见对话/场景/数据冲击开头',
+  });
+
+  // 5. Quote blocks ≥1
+  const quoteCount = (body.match(/^>\s/gm) || []).length;
+  checks.push({
+    test: '引用块 ≥1',
+    status: quoteCount >= 1 ? '✅' : '❌',
+    detail: `${quoteCount} 处`,
+  });
+
+  // 6. Tables ≥1
+  const tableCount = (body.match(/^\|.+\|$/gm) || []).length;
+  const hasTable = tableCount >= 3; // at least header + separator + 1 row
+  checks.push({
+    test: '表格 ≥1',
+    status: hasTable ? '✅' : '❌',
+    detail: hasTable ? `${Math.floor(tableCount / 3)} 个` : '无表格',
+  });
+
+  // 7. Action guidance ≥1 (建议/操作/关注等)
+  const hasGuidance = /建议|可以关注|值得|应该|不要|记住|操作/.test(body);
+  checks.push({
+    test: '行动指引 ≥1',
+    status: hasGuidance ? '✅' : '❌',
+    detail: hasGuidance ? '有' : '未发现行动指引',
+  });
+
+  // 8. Personal opinions ≥2 (明确立场)
+  const opinionCount = (body.match(/我的判断|我认为|我倾向于|我看来|我的结论|我的观点|我相信|我不认为/g) || []).length;
+  checks.push({
+    test: '个人判断 ≥2',
+    status: opinionCount >= 2 ? '✅' : opinionCount === 1 ? '⚠️' : '❌',
+    detail: `${opinionCount} 处`,
+  });
+
+  // 9. Data sources marked
+  const hasSource = /截至|数据来源|据.*数据|报道|报告|统计/g.test(body);
+  checks.push({
+    test: '数据来源标注',
+    status: hasSource ? '✅' : '⚠️',
+    detail: hasSource ? '有' : '建议标注数据截止日期',
+  });
+
+  // 10. Disclaimer
+  const hasDisclaimer = /免责|风险提示|不构成.*建议|仅供参考/.test(body);
+  checks.push({
+    test: '免责声明',
+    status: hasDisclaimer ? '✅' : '❌',
+    detail: hasDisclaimer ? '有' : '缺失',
+  });
+
+  // 11. Sub-headings ≥3 for structure
+  const subHCount = (body.match(/^#{2,3}\s+/gm) || []).length;
+  checks.push({
+    test: '小标题 ≥3',
+    status: subHCount >= 3 ? '✅' : subHCount >= 1 ? '⚠️' : '❌',
+    detail: `${subHCount} 个`,
+  });
+
+  // 12. Paragraph break: sections separated by ---
+  const sectionBreaks = (body.match(/^---$/gm) || []).length;
+  checks.push({
+    test: '板块分隔 ≥3',
+    status: sectionBreaks >= 3 ? '✅' : sectionBreaks >= 1 ? '⚠️' : '❌',
+    detail: `${sectionBreaks} 处分隔线`,
+  });
+
+  // 13. Footer template
+  const hasFooter = /点赞|在看|转发|关注/.test(body);
+  checks.push({
+    test: '尾部模板',
+    status: hasFooter ? '✅' : '⚠️',
+    detail: hasFooter ? '有' : '缺失（建议加互动引导）',
+  });
+
+  // 14. No body repeats title
+  const titleInBody = title.length > 3 && body.includes(title);
+  checks.push({
+    test: '正文不重复标题',
+    status: !titleInBody ? '✅' : '⚠️',
+    detail: titleInBody ? '正文中出现了标题' : '通过',
+  });
+
+  // 15. Mixed Chinese/English punctuation check
+  const mixedPunct = (body.match(/[\u4e00-\u9fff][,\.][\u4e00-\u9fff]/g) || []).length;
+  checks.push({
+    test: '中英文标点规范',
+    status: mixedPunct === 0 ? '✅' : '⚠️',
+    detail: mixedPunct > 0 ? `${mixedPunct} 处英文标点混入中文` : '通过',
+  });
+
+  return checks;
+}
+
 async function checkVideo(filePath) {
   const checks = [];
 
@@ -281,11 +430,14 @@ qc-gate — 统一质量门禁框架
   node qc-gate.mjs <文件路径> [选项]
 
 选项:
-  --json     输出 JSON 报告
-  --strict   所有检查必须通过
+  --json       输出 JSON 报告
+  --strict     所有检查必须通过（默认允许警告继续）
+  --preflight  公众号发布前严格检查（15项，含字数/标题/结构/格式）
 
 示例:
   node qc-gate.mjs article.md
+  node qc-gate.mjs article.md --preflight       # 公众号发布前检查
+  node qc-gate.mjs article.md --preflight --json # JSON 报告
   node qc-gate.mjs output.mp4 --json
   node qc-gate.mjs output.astro --strict
 `);
@@ -301,30 +453,42 @@ async function main() {
   const filePath = args.find(a => !a.startsWith('--'));
   const jsonMode = args.includes('--json');
   const strict = args.includes('--strict');
+  const preflight = args.includes('--preflight');
 
   if (!filePath || !existsSync(filePath)) {
     console.error('❌ 文件不存在或未指定');
     process.exit(1);
   }
 
-  const type = detectType(filePath);
   let checks = [];
-  switch (type) {
-    case 'article': checks = await checkArticle(filePath); break;
-    case 'video':   checks = await checkVideo(filePath); break;
-    case 'ppt':     checks = await checkPPT(filePath); break;
-    case 'astro':   checks = await checkAstro(filePath); break;
-    default:
-      checks = [{ test: '类型识别', status: '⚠️', detail: `无法识别: ${extname(filePath)}` }];
+
+  // --preflight: 公众号发布前严格检查（仅对 .md 生效）
+  if (preflight) {
+    const ext = extname(filePath).toLowerCase();
+    if (ext !== '.md') {
+      console.error('❌ --preflight 仅支持 .md 文件');
+      process.exit(1);
+    }
+    checks = await checkWechatArticle(filePath);
+  } else {
+    const type = detectType(filePath);
+    switch (type) {
+      case 'article': checks = await checkArticle(filePath); break;
+      case 'video':   checks = await checkVideo(filePath); break;
+      case 'ppt':     checks = await checkPPT(filePath); break;
+      case 'astro':   checks = await checkAstro(filePath); break;
+      default:
+        checks = [{ test: '类型识别', status: '⚠️', detail: `无法识别: ${extname(filePath)}` }];
+    }
   }
 
   // JSON 模式：只输出 JSON 到 stdout，日志走 stderr
   if (jsonMode) {
-    console.log(JSON.stringify({ file: filePath, type, checks }, null, 2));
+    console.log(JSON.stringify({ file: filePath, type: preflight ? 'wechat-preflight' : detectType(filePath), checks }, null, 2));
     return;
   }
 
-  console.log(`\n📋 QC 门禁 — ${type === 'unknown' ? '未知类型' : type.toUpperCase()}\n`);
+  console.log(`\n📋 QC 门禁 — ${preflight ? '公众号发布前检查 (15项)' : (detectType(filePath) === 'unknown' ? '未知类型' : detectType(filePath).toUpperCase())}\n`);
   log('📄', filePath);
   console.log('');
   for (const c of checks) {
@@ -337,7 +501,7 @@ async function main() {
   const failed = checks.filter(c => c.status === '❌').length;
   console.log(`\n  结果: ${passed}/${checks.length} 通过，${warned} 警告，${failed} 失败`);
 
-  if (strict && failed > 0) process.exit(1);
+  if ((strict || preflight) && failed > 0) process.exit(1);
 }
 
 main().catch(e => { console.error('❌', e.message); process.exit(1); });

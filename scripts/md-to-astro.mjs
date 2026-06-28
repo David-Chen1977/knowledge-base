@@ -13,6 +13,9 @@
  *   --preview             打印 .astro 内容到控制台，不写入
  *   --dry-run             只打印将执行的操作
  *   --git-commit          自动 git commit（需确认后手动 push）
+ *
+ * 注意: 当前网站使用 src/data/articles.ts 作为文章数据源。
+ * 本脚本自动注册文章到 articles.ts，而非旧的 blog.astro 内联列表。
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
@@ -213,42 +216,54 @@ ${coverHtml}
 </BaseLayout>`;
 }
 
-// ── 更新 blog.astro 文章列表 ──
+// ── 更新 articles.ts 文章列表 ──
 
-function updateBlogListing(websiteDir, entry, dryRun) {
-  const blogPath = join(websiteDir, 'src', 'pages', 'blog.astro');
-  if (!existsSync(blogPath)) {
-    console.error(`❌ blog.astro 不存在: ${blogPath}`);
+function updateArticleList(websiteDir, entry, dryRun) {
+  const articlesPath = join(websiteDir, 'src', 'data', 'articles.ts');
+  if (!existsSync(articlesPath)) {
+    console.error(`❌ articles.ts 不存在: ${articlesPath}`);
     return false;
   }
 
-  const content = readFileSync(blogPath, 'utf-8');
+  const content = readFileSync(articlesPath, 'utf-8');
 
   // 去重检查
   if (content.includes(`slug: '${entry.slug}'`)) {
-    console.log(`ℹ️  文章 "${entry.slug}" 已在 blog.astro 列表中，跳过`);
+    console.log(`ℹ️  文章 "${entry.slug}" 已在 articles.ts 中，跳过`);
     return true;
   }
 
-  const newLine = `  { slug: '${entry.slug}', title: '${entry.title.replace(/'/g, "\\'")}', desc: '${entry.desc.replace(/'/g, "\\'")}', date: '${entry.date}', readTime: '${entry.readTime}', category: '${entry.category.replace(/'/g, "\\'")}' },`;
+  // 构建新条目
+  const tagsStr = entry.tags?.length
+    ? `tags: [${entry.tags.map(t => `'${t.replace(/'/g, "\\'")}'`).join(', ')}]`
+    : '';
+  const seriesStr = entry.series
+    ? `series: { name: '${entry.series.name.replace(/'/g, "\\'")}', order: ${entry.series.order}, total: ${entry.series.total} }`
+    : '';
 
-  // 在第一个 articles 条目之前插入（按日期降序，新文章排最前）
-  const match = content.match(/\n\s*\{ slug: '/);
-  if (!match) {
-    console.error('❌ 未找到 blog.astro 中 articles 数组插入点');
+  const newEntry = `  ${entry.slug.endsWith('_') || entry.slug.endsWith('-') ? '' : '// ── ' + entry.category + ' ──'}
+  { slug: '${entry.slug}', title: '${entry.title.replace(/'/g, "\\'")}', desc: '${entry.desc.replace(/'/g, "\\'")}', date: '${entry.date}', readTime: '${entry.readTime}', category: '${entry.category.replace(/'/g, "\\'")}'${tagsStr ? `, ${tagsStr}` : ''}${seriesStr ? `, ${seriesStr}` : ''} },`;
+
+  // 在数组最后一条（}> 闭合前）插入，保持日期降序
+  // 找到最后一个 articles 条目（在闭合 ] 之前）
+  const arrayEnd = content.lastIndexOf('\n];');
+  if (arrayEnd < 0) {
+    console.error('❌ 未找到 articles.ts 数组结尾');
     return false;
   }
 
-  const pos = match.index + 1; // after the newline
-  const newContent = content.slice(0, pos) + newLine + '\n' + content.slice(pos);
+  // 在最后一个条目后、闭合前插入
+  const insertPos = content.lastIndexOf(',\n', arrayEnd - 1);
+  const pos = insertPos >= 0 ? insertPos + 1 : arrayEnd;
+  const newContent = content.slice(0, pos) + '\n' + newEntry + content.slice(pos);
 
   if (dryRun) {
-    console.log(`📝 将插入 blog.astro:\n   ${newLine.trim()}`);
+    console.log(`📝 将插入 articles.ts:\n${newEntry}`);
     return true;
   }
 
-  writeFileSync(blogPath, newContent, 'utf-8');
-  console.log(`✅ blog.astro 已更新，新增: ${entry.slug}`);
+  writeFileSync(articlesPath, newContent, 'utf-8');
+  console.log(`✅ articles.ts 已更新，新增: ${entry.slug}`);
   return true;
 }
 
@@ -320,15 +335,18 @@ function main() {
   writeFileSync(astroPath, astroContent, 'utf-8');
   console.log(`✅ .astro 已生成: ${bundle.slug}.astro`);
 
-  // 更新 blog.astro 列表
+  // 更新 articles.ts 列表
   const desc = bundle.digest || bundle.topic || '';
-  updateBlogListing(websiteDir, {
+  const tags = bundle.keywords || [];
+  updateArticleList(websiteDir, {
     slug: bundle.slug,
     title: bundle.title,
     desc,
     date,
     readTime,
-    category: (bundle.keywords?.[0]) || 'AI 协作',
+    category: tags[0] || '算电协同',
+    tags,
+    series: null,
   }, opts.dryRun);
 
   // Git 提交

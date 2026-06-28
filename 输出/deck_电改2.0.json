@@ -1,0 +1,4950 @@
+{
+  "title": "电改2.0：电力市场化进度全景地图",
+  "slides": [
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 3.2,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 1.5,
+          "y": 3.5,
+          "w": 10.3,
+          "h": 0.03,
+          "fill": "#B89A6A"
+        }
+      ],
+      "texts": [
+        {
+          "text": "电改2.0：电力市场化进度全景地图",
+          "x": 1.5,
+          "y": 2.0,
+          "w": 10.3,
+          "h": 1.2,
+          "fontSize": 38,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "——哪些省份真的在推电力市场化？",
+          "x": 1.5,
+          "y": 3.0,
+          "w": 10.3,
+          "h": 0.7,
+          "fontSize": 22,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算电协同投资系列 · 选题四",
+          "x": 1.5,
+          "y": 4.0,
+          "w": 10.3,
+          "h": 0.5,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026年6月",
+          "x": 1.5,
+          "y": 5.5,
+          "w": 10.3,
+          "h": 0.4,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "PE/VC Investment Pitch · Institutional Use Only",
+          "x": 1.5,
+          "y": 5.9,
+          "w": 10.3,
+          "h": 0.4,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 1.6,
+          "w": 11.9,
+          "h": 2.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.7,
+          "y": 1.6,
+          "w": 0.06,
+          "h": 2.2,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 4.2,
+          "w": 5.8,
+          "h": 1.8,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 4.2,
+          "w": 5.8,
+          "h": 1.8,
+          "fill": "#2e4259"
+        }
+      ],
+      "texts": [
+        {
+          "text": "核心观点",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Investment Thesis",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改2.0不是要不要推的问题，而是各省进度差3-5年——\n选对省份布局算电协同，比选对技术路线更重要。",
+          "x": 0.85,
+          "y": 1.6800000000000002,
+          "w": 11.6,
+          "h": 0.84,
+          "fontSize": 18,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "当前7省现货市场已正式运行（山西/广东/山东/甘肃/蒙西/湖北/浙江），\n5省即将转正（安徽/陕西/辽宁/河北南网/南方区域），\n仍有近10省停留在短周期试运行或未启动。",
+          "x": 0.85,
+          "y": 2.58,
+          "w": 11.6,
+          "h": 1.04,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "进度分化 → 跨省套利空间",
+          "x": 0.85,
+          "y": 4.28,
+          "w": 5.5,
+          "h": 0.43999999999999995,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西用户侧240元/MWh vs 广东460元/MWh\n价差近1倍，地理套利空间巨大",
+          "x": 0.85,
+          "y": 4.88,
+          "w": 5.5,
+          "h": 0.84,
+          "fontSize": 13,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "进度分化 → 选址决策梯度",
+          "x": 6.95,
+          "y": 4.28,
+          "w": 5.5,
+          "h": 0.43999999999999995,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "甘肃/蒙西/陕西低电价区→算电协同首选\n广东/江苏高价区→VPP/需求响应价值大",
+          "x": 6.95,
+          "y": 4.88,
+          "w": 5.5,
+          "h": 0.84,
+          "fontSize": 13,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.7,
+          "y": 2.8,
+          "w": 11.9,
+          "h": 0.02,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 1.5,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 3.5,
+          "y": 1.5,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.3,
+          "y": 1.5,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 9.1,
+          "y": 1.5,
+          "w": 3.5,
+          "h": 1.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 3.2,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 3.5,
+          "y": 3.2,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.3,
+          "y": 3.2,
+          "w": 2.5,
+          "h": 1.2,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 9.1,
+          "y": 3.2,
+          "w": 3.5,
+          "h": 1.2,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 5.0,
+          "w": 11.9,
+          "h": 1.6,
+          "fill": "#253747"
+        }
+      ],
+      "texts": [
+        {
+          "text": "电改进程时间线 | 2015-2026",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "从9号文到现货市场全面铺开",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2015\n中发9号文",
+          "x": 0.85,
+          "y": 1.58,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新一轮电改启动\n管住中间、放开两头",
+          "x": 0.85,
+          "y": 2.08,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2017-2019\n首批8个现货试点",
+          "x": 3.65,
+          "y": 1.58,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山西/广东/山东/甘肃\n蒙西/福建/浙江/四川",
+          "x": 3.65,
+          "y": 2.08,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2021-2023\n第二批试点+扩围",
+          "x": 6.45,
+          "y": 1.58,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "湖北/安徽/辽宁\n陕西/河北南网等",
+          "x": 6.45,
+          "y": 2.08,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2024-2026\n现货市场正式运行",
+          "x": 9.25,
+          "y": 1.58,
+          "w": 3.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "7省转正 + 5省即将转正\n负电价常态化·容量电价分化",
+          "x": 9.25,
+          "y": 2.08,
+          "w": 3.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2024.6\n粤/鲁转正",
+          "x": 0.85,
+          "y": 3.2800000000000002,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首批非试点省份转正\n市场规则持续迭代",
+          "x": 0.85,
+          "y": 3.7800000000000002,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025\n蒙西/湖北转正",
+          "x": 3.65,
+          "y": 3.2800000000000002,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首个非试点转正\n规则版本迭代加速",
+          "x": 3.65,
+          "y": 3.7800000000000002,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025-2026\n南方区域市场",
+          "x": 6.45,
+          "y": 3.2800000000000002,
+          "w": 2.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首个跨省区域市场\n粤桂云黔琼五省",
+          "x": 6.45,
+          "y": 3.7800000000000002,
+          "w": 2.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026关键变化",
+          "x": 9.25,
+          "y": 3.2800000000000002,
+          "w": 3.2,
+          "h": 0.64,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "负电价正式化 · 容量电价分化\n新能源全面入市 · 售电盈利模式重构",
+          "x": 9.25,
+          "y": 3.7800000000000002,
+          "w": 3.2,
+          "h": 0.43999999999999995,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "核心判断：2024-2026是电改从试点到全面铺开的转折窗口。先行省份已形成成熟市场机制，后发省份存在制度性红利。",
+          "x": 0.85,
+          "y": 5.08,
+          "w": 11.6,
+          "h": 1.24,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "3/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 12.7,
+          "h": 0.38,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.88,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.23,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.58,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.9299999999999997,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.28,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.63,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.9799999999999995,
+          "w": 12.7,
+          "h": 0.35,
+          "fill": "#253747"
+        }
+      ],
+      "texts": [
+        {
+          "text": "第一梯队 | 已正式运行（7省）",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "市场机制成熟，可做布局参考",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "4/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "省份",
+          "x": 0.3,
+          "y": 1.52,
+          "w": 1.2,
+          "h": 0.34,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "转正",
+          "x": 1.5,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.34,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "均价",
+          "x": 2.6,
+          "y": 1.52,
+          "w": 1.4,
+          "h": 0.34,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "核心特征",
+          "x": 4.0,
+          "y": 1.52,
+          "w": 3.3,
+          "h": 0.34,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算电协同价值",
+          "x": 7.3,
+          "y": 1.52,
+          "w": 2.9,
+          "h": 0.34,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山西",
+          "x": 0.3,
+          "y": 1.9,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2023",
+          "x": 1.5,
+          "y": 1.9,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~260",
+          "x": 2.6,
+          "y": 1.9,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首批试点，规则V15.0，辅助服务成熟",
+          "x": 4.0,
+          "y": 1.9,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "储能+VPP可参与",
+          "x": 7.3,
+          "y": 1.9,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东",
+          "x": 0.3,
+          "y": 2.25,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2024.6",
+          "x": 1.5,
+          "y": 2.25,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~460",
+          "x": 2.6,
+          "y": 2.25,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "负荷最大，电价最高，VPP首单落地",
+          "x": 4.0,
+          "y": 2.25,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "VPP/需求响应大",
+          "x": 7.3,
+          "y": 2.25,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山东",
+          "x": 0.3,
+          "y": 2.6,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2024.6",
+          "x": 1.5,
+          "y": 2.6,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~350",
+          "x": 2.6,
+          "y": 2.6,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新能源渗透高，储能补偿退坡",
+          "x": 4.0,
+          "y": 2.6,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新能源+储能套利",
+          "x": 7.3,
+          "y": 2.6,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "甘肃",
+          "x": 0.3,
+          "y": 2.9499999999999997,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2024.9",
+          "x": 1.5,
+          "y": 2.9499999999999997,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~145",
+          "x": 2.6,
+          "y": 2.9499999999999997,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新能源占比最高，电价全国最低",
+          "x": 4.0,
+          "y": 2.9499999999999997,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算电协同首选地",
+          "x": 7.3,
+          "y": 2.9499999999999997,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西",
+          "x": 0.3,
+          "y": 3.3,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025.2",
+          "x": 1.5,
+          "y": 3.3,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~240",
+          "x": 2.6,
+          "y": 3.3,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首个非试点转正，数据中心集群",
+          "x": 4.0,
+          "y": 3.3,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "最优布局地",
+          "x": 7.3,
+          "y": 3.3,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "湖北",
+          "x": 0.3,
+          "y": 3.65,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025.6",
+          "x": 1.5,
+          "y": 3.65,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~300",
+          "x": 2.6,
+          "y": 3.65,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "中部电力枢纽",
+          "x": 4.0,
+          "y": 3.65,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "区位价值中等",
+          "x": 7.3,
+          "y": 3.65,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "浙江",
+          "x": 0.3,
+          "y": 3.9999999999999996,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025底",
+          "x": 1.5,
+          "y": 3.9999999999999996,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~350",
+          "x": 2.6,
+          "y": 3.9999999999999996,
+          "w": 1.4,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "高负荷，高电价",
+          "x": 4.0,
+          "y": 3.9999999999999996,
+          "w": 3.3,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算力需求大",
+          "x": 7.3,
+          "y": 3.9999999999999996,
+          "w": 2.9,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 12.7,
+          "h": 0.36,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.8599999999999999,
+          "w": 12.7,
+          "h": 0.34,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.1999999999999997,
+          "w": 12.7,
+          "h": 0.34,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.54,
+          "w": 12.7,
+          "h": 0.34,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.88,
+          "w": 12.7,
+          "h": 0.34,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.2199999999999998,
+          "w": 12.7,
+          "h": 0.34,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 3.5,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.5,
+          "w": 0.06,
+          "h": 1.6,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 3.5,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 3.5,
+          "w": 0.06,
+          "h": 1.6,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 5.5,
+          "w": 12.7,
+          "h": 1.3,
+          "fill": "#2e4259"
+        }
+      ],
+      "texts": [
+        {
+          "text": "第二/三/四梯队 | 建设中与待启动",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "进度差3-5年，选对省份等于选对赛道",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "5/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "省份",
+          "x": 0.3,
+          "y": 1.52,
+          "w": 1.2,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "状态",
+          "x": 1.5,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "预计转正",
+          "x": 2.6,
+          "y": 1.52,
+          "w": 1.7,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "关键观察",
+          "x": 4.3,
+          "y": 1.52,
+          "w": 5.2,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "安徽",
+          "x": 0.3,
+          "y": 1.88,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "连续试运行",
+          "x": 1.5,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026.6",
+          "x": 2.6,
+          "y": 1.88,
+          "w": 1.7,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "规则仍在磨合，市场力干预",
+          "x": 4.3,
+          "y": 1.88,
+          "w": 5.2,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "陕西",
+          "x": 0.3,
+          "y": 2.2199999999999998,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "连续试运行",
+          "x": 1.5,
+          "y": 2.2199999999999998,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026.6",
+          "x": 2.6,
+          "y": 2.2199999999999998,
+          "w": 1.7,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "地板价常态化，30-70元/MWh",
+          "x": 4.3,
+          "y": 2.2199999999999998,
+          "w": 5.2,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辽宁",
+          "x": 0.3,
+          "y": 2.56,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025.3启动",
+          "x": 1.5,
+          "y": 2.56,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026",
+          "x": 2.6,
+          "y": 2.56,
+          "w": 1.7,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "引入负电价-100元/MWh",
+          "x": 4.3,
+          "y": 2.56,
+          "w": 5.2,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "河北南网",
+          "x": 0.3,
+          "y": 2.9,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025.3启动",
+          "x": 1.5,
+          "y": 2.9,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026",
+          "x": 2.6,
+          "y": 2.9,
+          "w": 1.7,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "承接北京外溢算力",
+          "x": 4.3,
+          "y": 2.9,
+          "w": 5.2,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "南方区域",
+          "x": 0.3,
+          "y": 3.2399999999999998,
+          "w": 1.2,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2025.6启动",
+          "x": 1.5,
+          "y": 3.2399999999999998,
+          "w": 1.1,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026Q4",
+          "x": 2.6,
+          "y": 3.2399999999999998,
+          "w": 1.7,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "首个跨省区域市场",
+          "x": 4.3,
+          "y": 3.2399999999999998,
+          "w": 5.2,
+          "h": 0.3,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "第三梯队：长周期试运行（9省）",
+          "x": 0.44999999999999996,
+          "y": 3.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "福建 | 四川 | 江苏 | 湖南 | 河南 | 宁夏 | 重庆 | 上海 | 吉林",
+          "x": 0.44999999999999996,
+          "y": 3.98,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "关键观察：江苏电价高但未转正；四川季节性波动巨大",
+          "x": 0.44999999999999996,
+          "y": 4.48,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "第四梯队：短周期试运行或未启动（5省）",
+          "x": 6.95,
+          "y": 3.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 13,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "江西 | 黑龙江 | 新疆 | 蒙东 | 青海",
+          "x": 6.95,
+          "y": 3.98,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "关键观察：黑龙江是典型\"电改落后省\"，\n但电价极低，未来转正存在制度性红利",
+          "x": 6.95,
+          "y": 4.48,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "核心结论：进度分化=选址梯度。先行省份（蒙西/甘肃/山西）有成熟市场，后发省份（陕西/辽宁）有转正红利。",
+          "x": 0.44999999999999996,
+          "y": 5.58,
+          "w": 12.399999999999999,
+          "h": 0.9400000000000001,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 12.7,
+          "h": 0.36,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.8599999999999999,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.19,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.52,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.8499999999999996,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.1799999999999997,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.51,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.84,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 4.17,
+          "w": 12.7,
+          "h": 0.33,
+          "fill": "#2e4259"
+        }
+      ],
+      "texts": [
+        {
+          "text": "最新电价分化态势 | 2026年6月第3周",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "八省现货市场价格数据（元/MWh）",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "6/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "省份",
+          "x": 0.3,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "日前最低",
+          "x": 1.4,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "日前最高",
+          "x": 2.5,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "实时最低",
+          "x": 3.6,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "实时最高",
+          "x": 4.7,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "平均中枢",
+          "x": 5.8,
+          "y": 1.52,
+          "w": 1.1,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "波动特征",
+          "x": 6.9,
+          "y": 1.52,
+          "w": 5.5,
+          "h": 0.32,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东",
+          "x": 0.3,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "135",
+          "x": 1.4,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "477",
+          "x": 2.5,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "128",
+          "x": 3.6,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "536",
+          "x": 4.7,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~460元",
+          "x": 5.8,
+          "y": 1.88,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "峰谷差极大，实时波动剧烈",
+          "x": 6.9,
+          "y": 1.88,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山西",
+          "x": 0.3,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "205",
+          "x": 1.4,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "318",
+          "x": 2.5,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "191",
+          "x": 3.6,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "334",
+          "x": 4.7,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~260元",
+          "x": 5.8,
+          "y": 2.21,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "相对平稳，市场成熟",
+          "x": 6.9,
+          "y": 2.21,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山东",
+          "x": 0.3,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "303",
+          "x": 1.4,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "460",
+          "x": 2.5,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "235",
+          "x": 3.6,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "436",
+          "x": 4.7,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~350元",
+          "x": 5.8,
+          "y": 2.54,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新能源出力日波动大",
+          "x": 6.9,
+          "y": 2.54,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西",
+          "x": 0.3,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "188",
+          "x": 1.4,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "276",
+          "x": 2.5,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "188",
+          "x": 3.6,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "276",
+          "x": 4.7,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~240元",
+          "x": 5.8,
+          "y": 2.8699999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "发电侧低，用户侧加权高",
+          "x": 6.9,
+          "y": 2.8699999999999997,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "陕西",
+          "x": 0.3,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "66",
+          "x": 1.4,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "313",
+          "x": 2.5,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "82",
+          "x": 3.6,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "303",
+          "x": 4.7,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~150元",
+          "x": 5.8,
+          "y": 3.1999999999999997,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "地板价频现，西北特征",
+          "x": 6.9,
+          "y": 3.1999999999999997,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辽宁",
+          "x": 0.3,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "112",
+          "x": 1.4,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "324",
+          "x": 2.5,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "106",
+          "x": 3.6,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "357",
+          "x": 4.7,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~200元",
+          "x": 5.8,
+          "y": 3.53,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "负电价常态化",
+          "x": 6.9,
+          "y": 3.53,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "江苏",
+          "x": 0.3,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "325",
+          "x": 1.4,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "369",
+          "x": 2.5,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "333",
+          "x": 3.6,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "380",
+          "x": 4.7,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~350元",
+          "x": 5.8,
+          "y": 3.86,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "高且稳定",
+          "x": 6.9,
+          "y": 3.86,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "安徽",
+          "x": 0.3,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "177",
+          "x": 1.4,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "298",
+          "x": 2.5,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "155",
+          "x": 3.6,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "315",
+          "x": 4.7,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "~250元",
+          "x": 5.8,
+          "y": 4.1899999999999995,
+          "w": 1.1,
+          "h": 0.29,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "市场力干预后趋稳",
+          "x": 6.9,
+          "y": 4.1899999999999995,
+          "w": 5.5,
+          "h": 0.29,
+          "fontSize": 8,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 1.8,
+          "w": 5.8,
+          "h": 2.0,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.7,
+          "y": 1.8,
+          "w": 0.06,
+          "h": 2.0,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 1.8,
+          "w": 5.8,
+          "h": 2.0,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 1.8,
+          "w": 0.06,
+          "h": 2.0,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.7,
+          "y": 4.2,
+          "w": 11.9,
+          "h": 2.2,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.7,
+          "y": 4.2,
+          "w": 0.06,
+          "h": 2.2,
+          "fill": "#C00000"
+        }
+      ],
+      "texts": [
+        {
+          "text": "电价分化核心结论",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "地理套利 + 时点套利 = 算电协同超额收益来源",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "7/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "结论一：电价梯度 = 选址梯度",
+          "x": 0.85,
+          "y": 1.8800000000000001,
+          "w": 5.5,
+          "h": 0.33999999999999997,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西/陕西/辽宁低价区 → 算电协同首选\n广东/江苏高价区 → VPP/需求响应价值大\n电价水平直接决定数据中心运营成本",
+          "x": 0.85,
+          "y": 2.38,
+          "w": 5.5,
+          "h": 1.1400000000000001,
+          "fontSize": 13,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "结论二：地理套利空间巨大",
+          "x": 6.95,
+          "y": 1.8800000000000001,
+          "w": 5.5,
+          "h": 0.33999999999999997,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西用户侧均价 ~240 元/MWh\n广东用户侧均价 ~460 元/MWh\n价差近 1 倍 → 年省电费数亿元",
+          "x": 6.95,
+          "y": 2.38,
+          "w": 5.5,
+          "h": 1.1400000000000001,
+          "fontSize": 13,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "结论三：时点套利空间存在",
+          "x": 0.85,
+          "y": 4.28,
+          "w": 11.6,
+          "h": 0.33999999999999997,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "陕西日前最低66元 vs 最高313元 = 日内价差4.7倍\n辽宁引入负电价（-100元/MWh）后，峰谷价差进一步拉大\n储能/柔性负荷可通过时点套利获取超额收益",
+          "x": 0.85,
+          "y": 4.78,
+          "w": 11.6,
+          "h": 1.1400000000000001,
+          "fontSize": 13,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 4.3,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 4.3,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 4.3,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 4.3,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#C00000"
+        }
+      ],
+      "texts": [
+        {
+          "text": "2026年电改关键变化 | 规则篇",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "四大结构性变革重塑电力市场格局",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "8/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "1. 负电价正式化",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辽宁2026年引入-100元/MWh价格下限\n新能源大省可能跟进\n储能/柔性负荷价值凸显",
+          "x": 0.44999999999999996,
+          "y": 2.08,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2. 容量电价分化",
+          "x": 6.95,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东气电容量电价涨164%-296%\n煤电涨65%\n独立储能容量补偿持续退坡",
+          "x": 6.95,
+          "y": 2.08,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "3. 新能源全面入市",
+          "x": 0.44999999999999996,
+          "y": 4.38,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "136号文：存量集中式新能源30-50%电量入市\n分布式光伏逐步全量入市\n绿电交易规模有望爆发式增长",
+          "x": 0.44999999999999996,
+          "y": 4.88,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "4. 售电盈利模式重构",
+          "x": 6.95,
+          "y": 4.38,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东取消浮动费用，批零价差基本消失\n售电从\"价差套利\"转向\"服务增值\"\n第三方服务商（AI报价/VPP）机会出现",
+          "x": 6.95,
+          "y": 4.88,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 4.0,
+          "h": 4.0,
+          "fill": "#253747"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 4.6,
+          "y": 1.5,
+          "w": 4.0,
+          "h": 4.0,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 8.9,
+          "y": 1.5,
+          "w": 4.0,
+          "h": 4.0,
+          "fill": "#253747"
+        }
+      ],
+      "texts": [
+        {
+          "text": "2026年电改关键变化 | 市场行为篇",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "发电策略转变 + 监管强化 + 跨省交易常态化",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "9/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "发电企业报价策略转变",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 3.7,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新年度中长期合约持仓比例调整\n多地1月1日电价跳涨20%-289%\n现货市场交易频次增加\n→ AI报价策略需求爆发",
+          "x": 0.44999999999999996,
+          "y": 2.08,
+          "w": 3.7,
+          "h": 3.1399999999999997,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "市场力监管加强",
+          "x": 4.75,
+          "y": 1.58,
+          "w": 3.7,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "安徽/湖北多次触发市场力缓解机制\n监管干预后电价曲线异常平稳\n规则版本迭代加速\n→ 交易合规成本上升",
+          "x": 4.75,
+          "y": 2.08,
+          "w": 3.7,
+          "h": 3.1399999999999997,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "跨省交易常态化",
+          "x": 9.05,
+          "y": 1.58,
+          "w": 3.7,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "西北/华中短期互济品种启动\n南方区域市场Q4启动\n省间壁垒逐渐打破\n→ 跨省套利机会增加",
+          "x": 9.05,
+          "y": 2.08,
+          "w": 3.7,
+          "h": 3.1399999999999997,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 12.7,
+          "h": 0.4,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.9,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.36,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 2.82,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.2800000000000002,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.74,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 4.2,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 4.66,
+          "w": 12.7,
+          "h": 0.46,
+          "fill": "#253747"
+        }
+      ],
+      "texts": [
+        {
+          "text": "投资选址决策矩阵",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改成熟度 × 电价水平 × 算电协同适合角色",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "10/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "省域",
+          "x": 0.3,
+          "y": 1.53,
+          "w": 2.1,
+          "h": 0.35,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改成熟度",
+          "x": 2.4,
+          "y": 1.53,
+          "w": 1.4,
+          "h": 0.35,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电价水平",
+          "x": 3.8,
+          "y": 1.53,
+          "w": 1.4,
+          "h": 0.35,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算电协同适合角色",
+          "x": 5.2,
+          "y": 1.53,
+          "w": 2.8,
+          "h": 0.35,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "推荐优先级",
+          "x": 8.0,
+          "y": 1.53,
+          "w": 2.5,
+          "h": 0.35,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#364153",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西",
+          "x": 0.3,
+          "y": 1.95,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★★",
+          "x": 2.4,
+          "y": 1.95,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "低",
+          "x": 3.8,
+          "y": 1.95,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "数据中心绿电直供",
+          "x": 5.2,
+          "y": 1.95,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0 首选",
+          "x": 8.0,
+          "y": 1.95,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "甘肃",
+          "x": 0.3,
+          "y": 2.4099999999999997,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★★",
+          "x": 2.4,
+          "y": 2.4099999999999997,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "极低",
+          "x": 3.8,
+          "y": 2.4099999999999997,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "算力西部枢纽",
+          "x": 5.2,
+          "y": 2.4099999999999997,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0",
+          "x": 8.0,
+          "y": 2.4099999999999997,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山西",
+          "x": 0.3,
+          "y": 2.8699999999999997,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★★",
+          "x": 2.4,
+          "y": 2.8699999999999997,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "中低",
+          "x": 3.8,
+          "y": 2.8699999999999997,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辅助服务+储能",
+          "x": 5.2,
+          "y": 2.8699999999999997,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P1",
+          "x": 8.0,
+          "y": 2.8699999999999997,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "陕西",
+          "x": 0.3,
+          "y": 3.33,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★",
+          "x": 2.4,
+          "y": 3.33,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "低",
+          "x": 3.8,
+          "y": 3.33,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "绿电直供（转正中）",
+          "x": 5.2,
+          "y": 3.33,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P1",
+          "x": 8.0,
+          "y": 3.33,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东",
+          "x": 0.3,
+          "y": 3.79,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★★",
+          "x": 2.4,
+          "y": 3.79,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "高",
+          "x": 3.8,
+          "y": 3.79,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "VPP/需求响应",
+          "x": 5.2,
+          "y": 3.79,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P1*",
+          "x": 8.0,
+          "y": 3.79,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辽宁",
+          "x": 0.3,
+          "y": 4.25,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★★",
+          "x": 2.4,
+          "y": 4.25,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "中低",
+          "x": 3.8,
+          "y": 4.25,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "绿电+储能组合",
+          "x": 5.2,
+          "y": 4.25,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P2",
+          "x": 8.0,
+          "y": 4.25,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "江苏",
+          "x": 0.3,
+          "y": 4.71,
+          "w": 2.1,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "★★★",
+          "x": 2.4,
+          "y": 4.71,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "高",
+          "x": 3.8,
+          "y": 4.71,
+          "w": 1.4,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "需等转正",
+          "x": 5.2,
+          "y": 4.71,
+          "w": 2.8,
+          "h": 0.36,
+          "fontSize": 10,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P3",
+          "x": 8.0,
+          "y": 4.71,
+          "w": 2.5,
+          "h": 0.36,
+          "fontSize": 11,
+          "bold": true,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 0.08,
+          "h": 1.6,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.38,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.78,
+          "y": 1.5,
+          "w": 0.08,
+          "h": 1.6,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.86,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.4,
+          "w": 0.08,
+          "h": 1.6,
+          "fill": "#c9ad7d"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.38,
+          "y": 3.4,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 6.78,
+          "y": 3.4,
+          "w": 0.08,
+          "h": 1.6,
+          "fill": "#c9ad7d"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.86,
+          "y": 3.4,
+          "w": 6.2,
+          "h": 1.6,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 5.3,
+          "w": 0.08,
+          "h": 1.3,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.38,
+          "y": 5.3,
+          "w": 6.2,
+          "h": 1.3,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 6.78,
+          "y": 5.3,
+          "w": 0.08,
+          "h": 1.3,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.86,
+          "y": 5.3,
+          "w": 6.2,
+          "h": 1.3,
+          "fill": "#2e4259"
+        }
+      ],
+      "texts": [
+        {
+          "text": "选址推荐排序详解",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0 > P1 > P2 > P3 — 分梯度投资策略",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "11/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0 首选：蒙西 · 甘肃",
+          "x": 0.53,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西：现货均价240元/MWh，内蒙古数据中心集群，绿电直连政策（688号文）已发布\n甘肃：现货均价145元/MWh（全国最低之一），新能源占比最高，绿电成本确定性优势",
+          "x": 0.53,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 0.9400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0 首选：整体评估",
+          "x": 7.010000000000001,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "这两个地区具备\"低电价+政策支持+产业集聚\"三重叠加效应\n数据中心可节省50%+电力成本",
+          "x": 7.010000000000001,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 0.9400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P1：山西 · 陕西 · 广东",
+          "x": 0.53,
+          "y": 3.48,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "山西：辅助服务市场成熟，储能+数据中心VPP可参与\n陕西：即将转正，地板价常态化，有转正制度红利\n广东：VPP首单落地，电价高但负荷侧价值大",
+          "x": 0.53,
+          "y": 3.88,
+          "w": 5.9,
+          "h": 0.9400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P1：差异化策略",
+          "x": 7.010000000000001,
+          "y": 3.48,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#c9ad7d",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "不同省份需要不同进入策略：\n山西→辅助服务 / 陕西→绿电直供 / 广东→VPP聚合",
+          "x": 7.010000000000001,
+          "y": 3.88,
+          "w": 5.9,
+          "h": 0.9400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P2-P3：辽宁 · 江苏 · 其他",
+          "x": 0.53,
+          "y": 5.38,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "辽宁：负电价机制带来储能套利窗口，但市场仍在建设中\n江苏：电价高且稳定，但尚未转正，需等待",
+          "x": 0.53,
+          "y": 5.78,
+          "w": 5.9,
+          "h": 0.64,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P2-P3：观察等待",
+          "x": 7.010000000000001,
+          "y": 5.38,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "新进入者可先布局P0-P1区域\nP2-P3区域保持跟踪，等待转正信号",
+          "x": 7.010000000000001,
+          "y": 5.78,
+          "w": 5.9,
+          "h": 0.64,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 4.3,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 4.3,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 4.3,
+          "w": 6.2,
+          "h": 2.5,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 4.3,
+          "w": 0.06,
+          "h": 2.5,
+          "fill": "#C00000"
+        }
+      ],
+      "texts": [
+        {
+          "text": "对算电协同赛道的含义 | 投资主题",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "四大投资主题过滤",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "12/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电力交易AI / 软件",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "现货市场扩容 → 交易频次增加 → AI报价策略需求爆发\n参考标的：国能日新、清大科越模式\n电改进度越快的省份，采购需求越迫切",
+          "x": 0.44999999999999996,
+          "y": 2.08,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "虚拟电厂聚合商",
+          "x": 6.95,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东33MW已入市，VPP模式跑通\n电改进度越快 → 市场机制越开放 → VPP价值越大\n需要关注各省VPP注册准入门槛",
+          "x": 6.95,
+          "y": 2.08,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "绿电直供项目",
+          "x": 0.44999999999999996,
+          "y": 4.38,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "688号文已发布\n内蒙古明确支持数据中心负荷绿电直连\n核心变量：过网费定价机制",
+          "x": 0.44999999999999996,
+          "y": 4.88,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "储能套利",
+          "x": 6.95,
+          "y": 4.38,
+          "w": 5.9,
+          "h": 0.33999999999999997,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "现货市场价格波动加剧 → 储能套利空间扩大\n山西已跑通模式，其余省份跟进中\n负电价机制是最强催化剂",
+          "x": 6.95,
+          "y": 4.88,
+          "w": 5.9,
+          "h": 1.6400000000000001,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 7.5,
+          "h": 4.8,
+          "fill": "#253747"
+        },
+        {
+          "type": "down_arrow",
+          "x": 3.2,
+          "y": 2.0,
+          "w": 0.5,
+          "h": 0.4,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "down_arrow",
+          "x": 3.2,
+          "y": 3.2,
+          "w": 0.5,
+          "h": 0.4,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "down_arrow",
+          "x": 3.2,
+          "y": 4.4,
+          "w": 0.5,
+          "h": 0.4,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 8.1,
+          "y": 1.5,
+          "w": 4.9,
+          "h": 4.8,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 8.1,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 4.8,
+          "fill": "#B89A6A"
+        }
+      ],
+      "texts": [
+        {
+          "text": "算电协同：投资逻辑纵深",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "从进度地图到投资结论的逻辑链",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "13/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Step 1：识别进度差距",
+          "x": 0.65,
+          "y": 1.6800000000000002,
+          "w": 6.7,
+          "h": 0.24000000000000002,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改2.0各省进度差3-5年 → 先行省份已形成市场化电价机制\n后发省份存在制度性红利",
+          "x": 0.65,
+          "y": 2.13,
+          "w": 6.7,
+          "h": 0.43999999999999995,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Step 2：定位电价梯度",
+          "x": 0.65,
+          "y": 2.88,
+          "w": 6.7,
+          "h": 0.24000000000000002,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "蒙西240 vs 广东460 → 地理套利空间1倍\n陕西日内价差4.7倍 → 时点套利空间",
+          "x": 0.65,
+          "y": 3.33,
+          "w": 6.7,
+          "h": 0.43999999999999995,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Step 3：匹配投资主题",
+          "x": 0.65,
+          "y": 4.08,
+          "w": 6.7,
+          "h": 0.24000000000000002,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "低电价区 → 绿电直供、数据中心投资\n高电价区 → VPP聚合、需求响应、储能",
+          "x": 0.65,
+          "y": 4.53,
+          "w": 6.7,
+          "h": 0.43999999999999995,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Step 4：执行选址决策",
+          "x": 0.65,
+          "y": 5.28,
+          "w": 6.7,
+          "h": 0.24000000000000002,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "P0（蒙西/甘肃）即刻布局\nP1（山西/陕西/广东）差异化进入\nP2-P3观望待机",
+          "x": 0.65,
+          "y": 5.73,
+          "w": 6.7,
+          "h": 0.43999999999999995,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "核心投资结论",
+          "x": 8.25,
+          "y": 1.6800000000000002,
+          "w": 4.6000000000000005,
+          "h": 0.33999999999999997,
+          "fontSize": 16,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改2.0是算电协同赛道的\n最重要基础设施变量。\n\n选对省份 = 选对赛道。\n\n蒙西和甘肃是目前最佳\n布局区域。",
+          "x": 8.25,
+          "y": 2.2800000000000002,
+          "w": 4.6000000000000005,
+          "h": 3.6399999999999997,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 1.8,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 1.8,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 1.8,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 1.8,
+          "fill": "#C00000"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 3.6,
+          "w": 6.2,
+          "h": 1.8,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 3.6,
+          "w": 0.06,
+          "h": 1.8,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 3.6,
+          "w": 6.2,
+          "h": 1.8,
+          "fill": "#2e4259"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 3.6,
+          "w": 0.06,
+          "h": 1.8,
+          "fill": "#B89A6A"
+        }
+      ],
+      "texts": [
+        {
+          "text": "关键风险因素",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "投资前需持续跟踪的核心风险",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "14/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "政策风险",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "省间壁垒：各省规则差异大，实际落地仍有地方保护\n容量电价政策尚未全国统一",
+          "x": 0.44999999999999996,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 1.04,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "市场风险",
+          "x": 6.95,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#C00000",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "输电通道占用费未明确\n部分省份新能源入市补贴退坡节奏不确定",
+          "x": 6.95,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 1.04,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "执行风险",
+          "x": 0.44999999999999996,
+          "y": 3.68,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "各省VPP注册流程和准入门槛差异大\n第三方聚合商开放程度参差不齐\n市场力干预可能扭曲价格信号",
+          "x": 0.44999999999999996,
+          "y": 4.08,
+          "w": 5.9,
+          "h": 1.04,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "技术风险",
+          "x": 6.95,
+          "y": 3.68,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "绿电直连过网费定价不确定\n储能+数据中心VPP技术集成复杂度\n跨省交易结算机制仍需验证",
+          "x": 6.95,
+          "y": 4.08,
+          "w": 5.9,
+          "h": 1.04,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 12.7,
+          "h": 4.5,
+          "fill": "#253747"
+        }
+      ],
+      "texts": [
+        {
+          "text": "下一步需要验证的问题",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Due Diligence 优先事项",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "15/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "1. 成本验证：蒙西/甘肃数据中心实际绿电采购成本 vs 大工业目录电价 vs 现货均价",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 12.399999999999999,
+          "h": 0.33999999999999997,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "到底能省多少？需要拿到当地大工业目录电价和中长期合约数据做对比分析",
+          "x": 0.44999999999999996,
+          "y": 2.08,
+          "w": 12.399999999999999,
+          "h": 0.24000000000000002,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2. 准入门槛：各省VPP注册流程和准入门槛差异 —— 哪些省真正对第三方聚合商开放？",
+          "x": 0.44999999999999996,
+          "y": 2.7800000000000002,
+          "w": 12.399999999999999,
+          "h": 0.33999999999999997,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "广东已开放但门槛高，需要逐省调研市场化交易准入条件和注册成本",
+          "x": 0.44999999999999996,
+          "y": 3.2800000000000002,
+          "w": 12.399999999999999,
+          "h": 0.24000000000000002,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "3. 政策细则：内蒙古\"数据中心负荷绿电直连\"政策执行细则 —— 过网费怎么算？",
+          "x": 0.44999999999999996,
+          "y": 3.98,
+          "w": 12.399999999999999,
+          "h": 0.33999999999999997,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "688号文已发布但关键细节待明确，直接影响项目经济性测算",
+          "x": 0.44999999999999996,
+          "y": 4.48,
+          "w": 12.399999999999999,
+          "h": 0.24000000000000002,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "4. 实时数据源：能否用 China Energy MCP 自动拉取各省电价数据？",
+          "x": 0.44999999999999996,
+          "y": 5.18,
+          "w": 12.399999999999999,
+          "h": 0.33999999999999997,
+          "fontSize": 14,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "建立实时进度地图监控，是持续跟踪投资机会的基础设施",
+          "x": 0.44999999999999996,
+          "y": 5.68,
+          "w": 12.399999999999999,
+          "h": 0.24000000000000002,
+          "fontSize": 12,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0.3,
+          "w": 13.333,
+          "h": 0.025,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 4.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 0.3,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 4.5,
+          "fill": "#B89A6A"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 6.2,
+          "h": 4.5,
+          "fill": "#253747"
+        },
+        {
+          "type": "rect",
+          "x": 6.8,
+          "y": 1.5,
+          "w": 0.06,
+          "h": 4.5,
+          "fill": "#B89A6A"
+        }
+      ],
+      "texts": [
+        {
+          "text": "附录：数据来源",
+          "x": 0.7,
+          "y": 0.5,
+          "w": 11.9,
+          "h": 0.7,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#B89A6A",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "本报告数据基于以下公开信息源",
+          "x": 0.7,
+          "y": 1.15,
+          "w": 11.9,
+          "h": 0.4,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#FFFFFF",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "16/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电力市场数据",
+          "x": 0.44999999999999996,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "北极星电力市场网：2026年6月第3周\n（6.15-6.21）八个地区现货价格周报\n\n北极星电力市场网：2026年5月\n第1-2周现货价格周报\n\n数字储能网：2026开年24省区\n现货价格涨跌观察（2026.1.26）",
+          "x": 0.44999999999999996,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 3.6399999999999997,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "政策与研究",
+          "x": 6.95,
+          "y": 1.58,
+          "w": 5.9,
+          "h": 0.24000000000000002,
+          "fontSize": 15,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "RMI落基山研究所：\n《2025电力市场化改革与电价体系洞察》\n\n广东电力交易中心：\n《广东电力市场2026年交易关键\n机制和参数》（2025.10）\n\n知识库已有研究：\n电改2.0落地时间表\n电力新能源赛道文件",
+          "x": 6.95,
+          "y": 1.98,
+          "w": 5.9,
+          "h": 3.6399999999999997,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {
+          "type": "rounded_rect",
+          "x": 3.5,
+          "y": 2.5,
+          "w": 6.3,
+          "h": 0.03,
+          "fill": "#B89A6A"
+        }
+      ],
+      "texts": [
+        {
+          "text": "谢谢",
+          "x": 1.5,
+          "y": 1.5,
+          "w": 10.3,
+          "h": 1.0,
+          "fontSize": 40,
+          "bold": true,
+          "color": "#B89A6A",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "Thank You",
+          "x": 1.5,
+          "y": 2.8,
+          "w": 10.3,
+          "h": 0.8,
+          "fontSize": 28,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "电改2.0：电力市场化进度全景地图",
+          "x": 1.5,
+          "y": 4.0,
+          "w": 10.3,
+          "h": 0.5,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#c9ad7d",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "数据截至2026年6月24日 · 仅供机构投资者参考",
+          "x": 1.5,
+          "y": 4.8,
+          "w": 10.3,
+          "h": 0.5,
+          "fontSize": 11,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "17/17",
+          "x": 12.0,
+          "y": 7.05,
+          "w": 1.0,
+          "h": 0.3,
+          "fontSize": 9,
+          "bold": false,
+          "color": "#B89A6A",
+          "align": "right",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    }
+  ]
+}

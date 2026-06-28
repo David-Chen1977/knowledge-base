@@ -1,0 +1,408 @@
+{
+  "title": "AI+能源双向赋能：政策已到，市场跟上了吗？",
+  "slides": [
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.06, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0, "y": 7.1, "w": 13.33, "h": 0.06, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 3.0, "w": 2.5, "h": 0.04, "fill": "#C00000"}
+      ],
+      "texts": [
+        {"text": "AI+能源双向赋能", "x": 0.8, "y": 1.5, "w": 11.73, "h": 1.2, "fontSize": 44, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "政策已到，市场跟上了吗？", "x": 0.8, "y": 2.7, "w": 11.73, "h": 0.9, "fontSize": 32, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "从PE/VC视角拆解五月政策组合拳背后的三层机会", "x": 0.8, "y": 3.6, "w": 11.73, "h": 0.6, "fontSize": 18, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "陈道雷", "x": 0.8, "y": 4.8, "w": 5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "汇竑资本  |  2026年6月", "x": 0.8, "y": 5.3, "w": 6, "h": 0.5, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "HUIHONG CAPITAL", "x": 9.5, "y": 6.5, "w": 3.5, "h": 0.5, "fontSize": 12, "color": "#B89A6A", "font": "Franklin Gothic Medium", "align": "right"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.6, "w": 3.75, "h": 4.8, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 4.79, "y": 1.6, "w": 3.75, "h": 4.8, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 8.98, "y": 1.6, "w": 3.75, "h": 4.8, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "核心问题：三个必须回答的拷问", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "01", "x": 0.9, "y": 1.8, "w": 1, "h": 0.6, "fontSize": 28, "bold": true, "color": "#C00000", "font": "Franklin Gothic Medium"},
+        {"text": "谁买单？", "x": 0.9, "y": 2.4, "w": 3.2, "h": 0.6, "fontSize": 22, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "最终付费方是谁？\n产业链各环节的真实支付意愿如何？\n算力用户 vs 数据中心 vs 电网/政府——三个层次的付费动机完全不同。", "x": 0.9, "y": 3.1, "w": 3.2, "h": 3.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "02", "x": 5.09, "y": 1.8, "w": 1, "h": 0.6, "fontSize": 28, "bold": true, "color": "#C00000", "font": "Franklin Gothic Medium"},
+        {"text": "数据在哪？", "x": 5.09, "y": 2.4, "w": 3.2, "h": 0.6, "fontSize": 22, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "没有真实交易数据的AI平台没有护城河。\n电力交易数据高度敏感，电网公司不会轻易开放。\n能跑通实盘才是真壁垒。", "x": 5.09, "y": 3.1, "w": 3.2, "h": 3.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "03", "x": 9.28, "y": 1.8, "w": 1, "h": 0.6, "fontSize": 28, "bold": true, "color": "#C00000", "font": "Franklin Gothic Medium"},
+        {"text": "为什么是你？", "x": 9.28, "y": 2.4, "w": 3.2, "h": 0.6, "fontSize": 22, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "电力行业极度排外。\n跨界团队必须回答：凭什么电网选你而不是体系内供应商？\n如果答案是\"因为我们AI更厉害\"，大概率没想清楚。", "x": 9.28, "y": 3.1, "w": 3.2, "h": 3.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 1.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.3, "w": 12.13, "h": 1.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 5.1, "w": 12.13, "h": 1.5, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "政策全景：五月三份文件的信号意义", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "5月8日", "x": 0.9, "y": 1.6, "w": 1.8, "h": 0.5, "fontSize": 16, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "四部门联合发布《关于促进人工智能与能源双向赋能的行动方案》", "x": 0.9, "y": 2.1, "w": 11.5, "h": 0.4, "fontSize": 16, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "29项重点任务 · 首次将绿电占比作为算力设施规划参考指标 · 到2027年构建AI能源保障体系 · 到2030年算力设施绿电供给世界领先", "x": 0.9, "y": 2.45, "w": 11.5, "h": 0.4, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "5月14日", "x": 0.9, "y": 3.4, "w": 1.8, "h": 0.5, "fontSize": 16, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "《关于有序推动多用户绿电直连发展有关事项的通知》（发改能源〔2026〕688号）", "x": 0.9, "y": 3.9, "w": 11.5, "h": 0.4, "fontSize": 16, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "绿电直连从\"一对一\"升级到\"一对多\" · 打开绿电批发市场 · 改变存量数据中心改造经济账", "x": 0.9, "y": 4.2, "w": 11.5, "h": 0.4, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "5月26日", "x": 0.9, "y": 5.2, "w": 1.8, "h": 0.5, "fontSize": 16, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "国家能源局发布首批51个\"AI+能源\"高价值场景", "x": 0.9, "y": 5.7, "w": 11.5, "h": 0.4, "fontSize": 16, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "25家能源企业签约开放场景 · 新能源出力预测/现货报价/故障自愈已进入招标阶段", "x": 0.9, "y": 6.0, "w": 11.5, "h": 0.4, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 1.5, "w": 0.06, "h": 5.0, "fill": "#C00000"},
+        {"type": "rounded_rect", "x": 1.0, "y": 1.5, "w": 5.6, "h": 1.3, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.9, "y": 1.5, "w": 5.6, "h": 1.3, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 1.0, "y": 3.1, "w": 5.6, "h": 1.3, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.9, "y": 3.1, "w": 5.6, "h": 1.3, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 1.0, "y": 4.7, "w": 5.6, "h": 1.3, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.9, "y": 4.7, "w": 5.6, "h": 1.3, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "《行动方案》拆解：29项任务的核心逻辑", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "约束机制升级", "x": 1.2, "y": 1.55, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "绿电占比成为算力设施项目布局规划的重要参考指标——不达标可能批不下来", "x": 1.2, "y": 1.95, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "资金杠杆倾斜", "x": 7.1, "y": 1.55, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "鼓励算力基础设施REITs + \"两重\"\"两新\"国家级资金渠道支持，算力+绿电项目优先", "x": 7.1, "y": 1.95, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "全链条覆盖", "x": 1.2, "y": 3.15, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "覆盖\"源-网-荷-储\"全链条，从底层算力枢纽到微电网、算力园区微观单元", "x": 1.2, "y": 3.55, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "范式转变", "x": 7.1, "y": 3.15, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "不是传统能源政策——是以算力为中心的能源保障体系，范式转变意味很浓", "x": 7.1, "y": 3.55, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "时间表明确", "x": 1.2, "y": 4.75, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "2027年：初步构建AI能源保障体系\n2030年：算力设施绿电供给保障能力达到世界领先水平", "x": 1.2, "y": 5.15, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "29项任务", "x": 7.1, "y": 4.75, "w": 5.2, "h": 0.4, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "政策密度之高、节奏之快，在能源和AI两个领域都属罕见", "x": 7.1, "y": 5.15, "w": 5.2, "h": 0.7, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 1.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.3, "w": 12.13, "h": 1.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 5.1, "w": 12.13, "h": 1.5, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "688号文：绿电直连2.0的三个商业影响", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "影响一：绿电批发市场打开", "x": 0.9, "y": 1.6, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "\"一对一\"→\"一对多\"：一个风光电站可同时服务多个数据中心和产业园区。中小数据中心、第三方IDC从此可以参与绿电直连，门槛大幅降低。", "x": 0.9, "y": 2.1, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "影响二：存量数据中心改造市场启动", "x": 0.9, "y": 3.4, "w": 7, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "电费占运营成本30-60%，绿电直连可降低10-20%。中国数据中心年用电量~3000亿kWh，仅10%转为绿电直连即为300亿kWh级别市场。", "x": 0.9, "y": 3.9, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "影响三：算力西迁的经济账变了", "x": 0.9, "y": 5.2, "w": 6, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "西部招商从\"电价便宜\"升级为\"绿电直连+碳足迹可追溯\"，对高耗能训练业务吸引力大增。", "x": 0.9, "y": 5.7, "w": 11.5, "h": 0.7, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 5.2, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "51个高价值场景的潜台词", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "最重要的信号：甲方主动开门了", "x": 0.9, "y": 1.7, "w": 11.5, "h": 0.5, "fontSize": 22, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "25家能源企业签约开放场景——电力系统是极度保守的行业，愿意开放说明痛点已不可忽视", "x": 0.9, "y": 2.3, "w": 11.5, "h": 0.5, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "已进入招标阶段的真实需求", "x": 0.9, "y": 3.1, "w": 11.5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "▸ 新能源出力预测  ▸ 现货市场报价  ▸ 电网故障自愈  ▸ 智能调度  ▸ 用能优化", "x": 0.9, "y": 3.6, "w": 11.5, "h": 0.5, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "从投资视角看", "x": 0.9, "y": 4.4, "w": 11.5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "真正值得投的不是宏大叙事的平台，而是能在\"一个具体场景里跑通闭环\"的团队", "x": 0.9, "y": 4.9, "w": 11.5, "h": 0.5, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "案例：广东现货市场日均交易96次/天，人工报价根本跟不上，AI策略是降维打击而非锦上添花", "x": 0.9, "y": 5.4, "w": 11.5, "h": 0.5, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 3.75, "h": 5.2, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 4.79, "y": 1.5, "w": 3.75, "h": 5.2, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 8.98, "y": 1.5, "w": 3.75, "h": 5.2, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "三层机会框架", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "第一层：设备", "x": 0.9, "y": 1.7, "w": 3.2, "h": 0.5, "fontSize": 22, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "真金白银", "x": 0.9, "y": 2.2, "w": 3.2, "h": 0.5, "fontSize": 18, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "液冷散热、高效UPS、储能系统\n\nPUE<1.25政策驱动，确定性最强\n\n但资产重、增长受限、估值天花板低（30-50x PE）\n\n一级缺优质标的", "x": 0.9, "y": 2.8, "w": 3.2, "h": 3.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "第二层：平台", "x": 5.09, "y": 1.7, "w": 3.2, "h": 0.5, "fontSize": 22, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "核心推荐 ✓", "x": 5.09, "y": 2.2, "w": 3.2, "h": 0.5, "fontSize": 18, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "AI电力交易、算力调度、VPP聚合、AI制冷SaaS、碳管理\n\n轻资产+高壁垒+可复制\n\n毛利60-80%，边际成本趋零\n\n最舒服的一级标的画像", "x": 5.09, "y": 2.8, "w": 3.2, "h": 3.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "第三层：概念", "x": 9.28, "y": 1.7, "w": 3.2, "h": 0.5, "fontSize": 22, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "保持警惕 ⚠", "x": 9.28, "y": 2.2, "w": 3.2, "h": 0.5, "fontSize": 18, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "\"AI赋能能源\"\"智慧能源大脑\"\"能源元宇宙\"\n\n大词越多越要警惕\n\n判断标准：三句话内能否说清客户、问题、收费方式？\n\n不行 => 仍在PPT阶段", "x": 9.28, "y": 2.8, "w": 3.2, "h": 3.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 5.85, "h": 2.2, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.88, "y": 1.5, "w": 5.85, "h": 2.2, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 4.0, "w": 12.13, "h": 2.8, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "第一层：设备/硬件市场", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "确定性机会：PUE<1.25驱动", "x": 0.9, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "液冷散热：从可选变为必选\n高效UPS：能效标准提升\n储能集成：调峰调频需求", "x": 0.9, "y": 2.2, "w": 5.2, "h": 1.2, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "一级市场的痛点", "x": 7.18, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "✦ 资产重：产线资本投入数亿\n✦ 增长受限：产能爬坡约束\n✦ 估值天花板低：30-50x PE", "x": 7.18, "y": 2.2, "w": 5.2, "h": 1.2, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "唯一值得关注的细分：浸没式液冷", "x": 0.9, "y": 4.1, "w": 8, "h": 0.5, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "技术路线尚未收敛，存在\"路线赌对\"的超额回报机会。英维克已上市，一级缺乏同类优质标的。设备不是最优配置，但可作为赛道配置的一部分。", "x": 0.9, "y": 4.6, "w": 11.5, "h": 1.0, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "一级市场判断：设备不是最优配置，但可以作为赛道配置的一部分。重点关注浸没式液冷早期公司。", "x": 0.9, "y": 5.8, "w": 11.5, "h": 0.7, "fontSize": 15, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 5.85, "h": 2.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.88, "y": 1.5, "w": 5.85, "h": 2.5, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "第二层（核心推荐）：平台/SaaS机会", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "\"AI+能源的卖铲人\"", "x": 0.9, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "▸ AI电力交易平台（现货报价策略）\n▸ 算力调度平台（跨区域/跨云优化）\n▸ VPP聚合平台（需求响应）\n▸ AI制冷优化SaaS（数据中心节能）\n▸ 碳管理SaaS（碳资产追踪交易）", "x": 0.9, "y": 2.2, "w": 5.2, "h": 1.5, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "共同特征", "x": 7.18, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "✓ 轻资产：不需要建厂房买设备\n✓ 高壁垒：算法+真实数据+客户粘性\n✓ 可复制：边际成本趋近于零\n✓ 毛利高：60-80%是合理预期", "x": 7.18, "y": 2.2, "w": 5.2, "h": 1.5, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "⚠ 关键陷阱", "x": 0.9, "y": 4.4, "w": 5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "很多公司说在做\"AI电力交易\"，实际上只是给电网做定制化项目，不是可规模化的SaaS产品。真实壁垒不是AI算法（门槛在降低），而是：", "x": 0.9, "y": 4.9, "w": 11.5, "h": 0.6, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "1. 拿到真实交易数据  2. 跑通实盘盈利  3. 形成数据飞轮", "x": 0.9, "y": 5.6, "w": 11.5, "h": 0.5, "fontSize": 16, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "一级市场判断：这是目前最值得出手的环节。但尽调时要穿透\"AI\"包装，看清数据来源和实盘业绩。", "x": 0.9, "y": 6.2, "w": 11.73, "h": 0.7, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 1.6, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.4, "w": 12.13, "h": 1.6, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 5.3, "w": 12.13, "h": 1.3, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "AI电力交易平台详解", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "看得见的真需求：现货市场AI化", "x": 0.9, "y": 1.6, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "广东现货市场日均交易96次/天，人工报价根本无法追赶。AI策略不是锦上添花——是降维打击。电力现货市场报价是典型的时序预测+动态博弈问题，正是AI擅长的领域。", "x": 0.9, "y": 2.1, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "真正的壁垒（不是AI算法）", "x": 0.9, "y": 3.5, "w": 7, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "① 拿到真实交易数据：电力交易数据高度敏感，电网不会轻易开放\n② 跑通实盘：回测好和实盘盈利是两回事\n③ 形成数据飞轮：做得越多，模型越准——这才是真护城河", "x": 0.9, "y": 4.0, "w": 11.5, "h": 0.9, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "已有标的：瓦特智能（B轮/5亿实盘运营） · 清大科越（Pre-IPO/20亿）  ✅ 投资窗口期", "x": 0.9, "y": 5.5, "w": 11.5, "h": 0.4, "fontSize": 16, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 2.0, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.8, "w": 12.13, "h": 2.8, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "AI制冷优化SaaS：最大的空白市场", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "海外对标：Phaidra", "x": 0.9, "y": 1.6, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "Phaidra已为Google降低30%制冷能耗。其AI控制系统实时优化数据中心暖通参数，无需硬件改造，纯软件价值。海外估值已超10亿美元。", "x": 0.9, "y": 2.1, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "国内对标空白——最佳投资窗口 ⭐", "x": 0.9, "y": 2.6, "w": 8, "h": 0.5, "fontSize": 18, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "为什么现在？", "x": 0.9, "y": 3.9, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "1. PUE<1.25政策：新建+存量数据中心必须达标，制冷优化是最直接的成本项\n2. 电费占比高：30-60%运营成本，节能是刚需\n3. 海外验证：Phaidra证明了AI制冷优化的技术可行性和商业价值\n4. 市场空白：国内暂无专注该领域的独立公司\n5. 轻资产SaaS：实施周期短，无硬件成本，毛利60-80%", "x": 0.9, "y": 4.4, "w": 11.5, "h": 2.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "一级市场判断：⭐ 最佳投资窗口。这是一个全球性的机会，中国需求可能比海外更迫切。", "x": 0.9, "y": 6.2, "w": 11.73, "h": 0.5, "fontSize": 15, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 5.85, "h": 2.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.88, "y": 1.5, "w": 5.85, "h": 2.5, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 4.3, "w": 12.13, "h": 2.4, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "VPP聚合与算力调度", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "VPP聚合平台", "x": 0.9, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "数据中心作为柔性负荷参与需求响应\n电网为调峰调频付费\n\n模式：聚合多个数据中心的闲置备用容量\n在电网需要时释放，赚取辅助服务费用\n\n已有标的：电享科技（A轮/2亿）", "x": 0.9, "y": 2.2, "w": 5.2, "h": 1.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "算力调度平台", "x": 7.18, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "跨区域/跨云负载优化\n根据电价+绿电供给调度算力任务\n\n模式：将训练任务调度到绿电充足/电价低的区域\n类似AWS的\"跟随可再生能源\"调度\n\n已有标的：算力互联（B轮/8亿）、星链算力（A轮/3亿）", "x": 7.18, "y": 2.2, "w": 5.2, "h": 1.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "投资时点判断", "x": 0.9, "y": 4.4, "w": 5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "两者均处于早期阶段（试点→产品化过渡期），属于\"政策催化+市场验证\"并行的赛道。\nVPP聚合的政策确定性更强（电改2.0核心方向），算力调度的市场规模天花板更高。\n建议：两个方向都配置，VPP聚合优先（政策确定性），算力调度跟进（市场空间更大）。", "x": 0.9, "y": 4.9, "w": 11.5, "h": 1.5, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 12.13, "h": 1.6, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.4, "w": 12.13, "h": 1.6, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 5.3, "w": 12.13, "h": 1.4, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "第三层：哪些是概念？——提高警惕", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "典型危险信号", "x": 0.9, "y": 1.6, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "\"AI赋能能源\"  \"智慧能源大脑\"  \"能源元宇宙\"  \"能源AIoT平台\"\n大词越多，越要警惕。如果一家公司不能在三句话内说清客户是谁、解决什么问题、怎么收费，大概率还在PPT阶段。", "x": 0.9, "y": 2.1, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "跨界团队的灵魂拷问", "x": 0.9, "y": 3.5, "w": 7, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "电力行业极度排外。跨界团队必须回答：\"凭什么电网/发电集团选你而不是他们体系内的供应商？\"如果答案是\"因为我们AI更厉害\"，那大概率还没想清楚。电力行业的商业关系、招投标流程、合规要求是独立于技术能力的壁垒。", "x": 0.9, "y": 4.0, "w": 11.5, "h": 0.8, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "一级市场的判断标准", "x": 0.9, "y": 5.4, "w": 5, "h": 0.5, "fontSize": 18, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "对宏大叙事保持警惕，对具体场景保持敏感。优先看已有标杆客户、已签合同的团队。", "x": 0.9, "y": 5.9, "w": 11.5, "h": 0.6, "fontSize": 15, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 3.75, "h": 2.0, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 4.79, "y": 1.5, "w": 3.75, "h": 2.0, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 8.98, "y": 1.5, "w": 3.75, "h": 2.0, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 0.6, "y": 3.8, "w": 12.13, "h": 2.8, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "谁买单？——付费链分析", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "算力用户", "x": 0.9, "y": 1.6, "w": 3.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "运营商/云厂商/AI公司\n为\"绿电+低电价\"付费\n溢价空间5-10%", "x": 0.9, "y": 2.1, "w": 3.2, "h": 1.2, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "数据中心运营商", "x": 5.09, "y": 1.6, "w": 3.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "万国数据/秦淮数据等\n直接采购方（省钱的动力最强）\n需求响应/绿电直连/AI制冷", "x": 5.09, "y": 2.1, "w": 3.2, "h": 1.2, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "电网/政府", "x": 9.28, "y": 1.6, "w": 3.2, "h": 0.5, "fontSize": 20, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "政策补贴方\n调峰调频辅助服务\n绿证/碳交易间接补贴\n存在政策风险", "x": 9.28, "y": 2.1, "w": 3.2, "h": 1.2, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "核心判断：付费确定性排序", "x": 0.9, "y": 3.9, "w": 5, "h": 0.5, "fontSize": 20, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "短期确定性最高的是\"帮数据中心省钱\"的模式（AI制冷优化、需求响应平台）——付费方是数据中心运营商，动机最强、决策最快。\n\n中期\"帮电网赚钱\"的模式（电力交易AI、算力调度）也会爆发，但窗口期顺序不同——前者需要电改2.0落地，后者需要用户习惯养成。\n\n长期来看，绿电溢价+碳交易+辅助服务将形成三重付费机制。但当前阶段，省钱的生意比赚钱的生意好做。", "x": 0.9, "y": 4.4, "w": 11.5, "h": 1.8, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 1.5, "w": 2.6, "h": 0.55, "fill": "#C00000"},
+        {"type": "rect", "x": 3.2, "y": 1.5, "w": 3.7, "h": 0.55, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 1.5, "w": 2.3, "h": 0.55, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 1.5, "w": 1.7, "h": 0.55, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 1.5, "w": 1.83, "h": 0.55, "fill": "#2A3446"},
+        {"type": "line", "x": 0.6, "y": 2.05, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 2.15, "w": 2.6, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 2.15, "w": 3.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 2.15, "w": 2.3, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 2.15, "w": 1.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 2.15, "w": 1.83, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 0.6, "y": 2.05, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 3.05, "w": 2.6, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 3.05, "w": 3.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 3.05, "w": 2.3, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 3.05, "w": 1.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 3.05, "w": 1.83, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 0.6, "y": 3.05, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 3.95, "w": 2.6, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 3.95, "w": 3.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 3.95, "w": 2.3, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 3.95, "w": 1.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 3.95, "w": 1.83, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 0.6, "y": 3.95, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 4.85, "w": 2.6, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 4.85, "w": 3.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 4.85, "w": 2.3, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 4.85, "w": 1.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 4.85, "w": 1.83, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 0.6, "y": 4.85, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 5.75, "w": 2.6, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 5.75, "w": 3.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 5.75, "w": 2.3, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 5.75, "w": 1.7, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 5.75, "w": 1.83, "h": 0.8, "fill": "#2A3446"},
+        {"type": "rect", "x": 0.6, "y": 5.75, "w": 12.13, "h": 0.01, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.6, "y": 6.65, "w": 2.6, "h": 0.5, "fill": "#2A3446"},
+        {"type": "rect", "x": 3.2, "y": 6.65, "w": 3.7, "h": 0.5, "fill": "#2A3446"},
+        {"type": "rect", "x": 6.9, "y": 6.65, "w": 2.3, "h": 0.5, "fill": "#2A3446"},
+        {"type": "rect", "x": 9.2, "y": 6.65, "w": 1.7, "h": 0.5, "fill": "#2A3446"},
+        {"type": "rect", "x": 10.9, "y": 6.65, "w": 1.83, "h": 0.5, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "标的映射：现有玩家分布", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "子赛道", "x": 0.7, "y": 1.53, "w": 2.4, "h": 0.5, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "代表标的", "x": 3.25, "y": 1.53, "w": 3.6, "h": 0.5, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "阶段", "x": 6.95, "y": 1.53, "w": 2.2, "h": 0.5, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "时点", "x": 9.25, "y": 1.53, "w": 1.6, "h": 0.5, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "判断", "x": 10.95, "y": 1.53, "w": 1.7, "h": 0.5, "fontSize": 15, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "AI电力交易", "x": 0.7, "y": 2.18, "w": 2.4, "h": 0.75, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "瓦特智能(B轮/5亿)\n清大科越(Pre-IPO/20亿)", "x": 3.25, "y": 2.18, "w": 3.6, "h": 0.75, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "已有实盘", "x": 6.95, "y": 2.18, "w": 2.2, "h": 0.75, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "✅", "x": 9.25, "y": 2.18, "w": 1.6, "h": 0.75, "fontSize": 16, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "窗口期", "x": 10.95, "y": 2.18, "w": 1.7, "h": 0.75, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "VPP聚合", "x": 0.7, "y": 3.08, "w": 2.4, "h": 0.75, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "电享科技(A轮/2亿)", "x": 3.25, "y": 3.08, "w": 3.6, "h": 0.75, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "试点阶段", "x": 6.95, "y": 3.08, "w": 2.2, "h": 0.75, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "✅", "x": 9.25, "y": 3.08, "w": 1.6, "h": 0.75, "fontSize": 16, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "早期", "x": 10.95, "y": 3.08, "w": 1.7, "h": 0.75, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "算力调度", "x": 0.7, "y": 3.98, "w": 2.4, "h": 0.75, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "算力互联(B轮/8亿)\n星链算力(A轮/3亿)", "x": 3.25, "y": 3.98, "w": 3.6, "h": 0.75, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "产品化", "x": 6.95, "y": 3.98, "w": 2.2, "h": 0.75, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "✅", "x": 9.25, "y": 3.98, "w": 1.6, "h": 0.75, "fontSize": 16, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "窗口期", "x": 10.95, "y": 3.98, "w": 1.7, "h": 0.75, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "AI制冷优化", "x": 0.7, "y": 4.88, "w": 2.4, "h": 0.75, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "国内暂无专注独立公司\n海外：Phaidra(10亿美元+)", "x": 3.25, "y": 4.88, "w": 3.6, "h": 0.75, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "空白", "x": 6.95, "y": 4.88, "w": 2.2, "h": 0.75, "fontSize": 13, "color": "#C00000", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "⭐", "x": 9.25, "y": 4.88, "w": 1.6, "h": 0.75, "fontSize": 16, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "最佳", "x": 10.95, "y": 4.88, "w": 1.7, "h": 0.75, "fontSize": 13, "color": "#C00000", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "液冷散热", "x": 0.7, "y": 5.78, "w": 2.4, "h": 0.75, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "英维克(上市)\n高澜股份(上市)", "x": 3.25, "y": 5.78, "w": 3.6, "h": 0.75, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "成熟", "x": 6.95, "y": 5.78, "w": 2.2, "h": 0.75, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "", "x": 9.25, "y": 5.78, "w": 1.6, "h": 0.75, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "二级", "x": 10.95, "y": 5.78, "w": 1.7, "h": 0.75, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "碳管理SaaS", "x": 0.7, "y": 6.68, "w": 2.4, "h": 0.45, "fontSize": 14, "color": "#B89A6A", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "暂无算电协同聚焦标的", "x": 3.25, "y": 6.68, "w": 3.6, "h": 0.45, "fontSize": 12, "color": "#FFFFFF", "font": "Microsoft YaHei", "valign": "middle"},
+        {"text": "空白", "x": 6.95, "y": 6.68, "w": 2.2, "h": 0.45, "fontSize": 13, "color": "#C00000", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "⭐", "x": 9.25, "y": 6.68, "w": 1.6, "h": 0.45, "fontSize": 16, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"},
+        {"text": "关注", "x": 10.95, "y": 6.68, "w": 1.7, "h": 0.45, "fontSize": 13, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center", "valign": "middle"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.04, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0.8, "y": 0.95, "w": 3, "h": 0.03, "fill": "#B89A6A"},
+        {"type": "rounded_rect", "x": 0.6, "y": 1.5, "w": 5.85, "h": 5.0, "fill": "#2A3446"},
+        {"type": "rounded_rect", "x": 6.88, "y": 1.5, "w": 5.85, "h": 5.0, "fill": "#2A3446"}
+      ],
+      "texts": [
+        {"text": "投资行动指引", "x": 0.8, "y": 0.15, "w": 11.73, "h": 0.7, "fontSize": 28, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei"},
+        {"text": "对PE/VC同行", "x": 0.9, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 22, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "1. 优先看第二层（平台/SaaS）\n   轻资产+高壁垒+可复制——PE/VC最舒服的标的\n\n2. 尽调核心验证三个问题\n   ① 数据来源可不可持续？\n   ② 实盘业绩能不能验证？\n   ③ 客户续约率？\n\n3. 关注第一个\"标杆客户\"\n   在电力行业，第一个大客户的获取难度远高于技术开发\n\n4. 对宏大叙事保持警惕\n   对具体场景保持敏感", "x": 0.9, "y": 2.3, "w": 5.2, "h": 4.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"},
+        {"text": "对创业者", "x": 7.18, "y": 1.6, "w": 5.2, "h": 0.5, "fontSize": 22, "bold": true, "color": "#C00000", "font": "Microsoft YaHei"},
+        {"text": "1. 不要做\"AI+能源\"平台\n   太大了，资源不够\n\n2. 选一个具体场景死磕\n   现货报价/制冷优化/需求响应\n   三个方向都是真需求\n\n3. 先绑定一个大客户\n   在电力行业，最好的销售是\n   \"头部客户案例\"\n\n4. 重视数据积累\n   半年后，这会是最大的护城河", "x": 7.18, "y": 2.3, "w": 5.2, "h": 4.0, "fontSize": 14, "color": "#FFFFFF", "font": "Microsoft YaHei"}
+      ]
+    },
+    {
+      "background": "#364153",
+      "shapes": [
+        {"type": "rect", "x": 0, "y": 0, "w": 13.33, "h": 0.06, "fill": "#B89A6A"},
+        {"type": "rect", "x": 0, "y": 7.1, "w": 13.33, "h": 0.06, "fill": "#B89A6A"},
+        {"type": "rect", "x": 5.5, "y": 2.2, "w": 2.33, "h": 2.33, "line_color": "#B89A6A", "line_width": 1.5}
+      ],
+      "texts": [
+        {"text": "THANK YOU", "x": 2, "y": 0.8, "w": 9.33, "h": 1.0, "fontSize": 36, "bold": true, "color": "#B89A6A", "font": "Franklin Gothic Medium", "align": "center"},
+        {"text": "AI+能源双向赋能", "x": 2, "y": 2.8, "w": 9.33, "h": 0.6, "fontSize": 22, "bold": true, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center"},
+        {"text": "政策已到，市场跟上了吗？", "x": 2, "y": 3.4, "w": 9.33, "h": 0.5, "fontSize": 18, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center"},
+        {"text": "陈道雷", "x": 2, "y": 4.3, "w": 9.33, "h": 0.5, "fontSize": 18, "bold": true, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center"},
+        {"text": "汇竑资本  HUIHONG CAPITAL", "x": 2, "y": 4.8, "w": 9.33, "h": 0.4, "fontSize": 14, "color": "#B89A6A", "font": "Franklin Gothic Medium", "align": "center"},
+        {"text": "数据截止：2026年6月25日", "x": 2, "y": 5.5, "w": 9.33, "h": 0.4, "fontSize": 13, "color": "#FFFFFF", "font": "Microsoft YaHei", "align": "center"},
+        {"text": "本文仅代表个人观点，不构成投资建议。投资有风险，决策需谨慎。", "x": 1.5, "y": 6.2, "w": 10.33, "h": 0.5, "fontSize": 11, "color": "#B89A6A", "font": "Microsoft YaHei", "align": "center"}
+      ]
+    }
+  ]
+}

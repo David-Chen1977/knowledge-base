@@ -332,7 +332,9 @@ async function cmdWatch() {
     const raw = readFileSync(signalsFile, 'utf-8');
     const data = JSON.parse(raw);
     signals = data.signals || [];
-  } catch {}
+  } catch {
+    log('ℹ️', '信号文件不可读（首次运行或无信号）');
+  }
 
   // 3. 展示高价值未消费信号
   const hotSignals = signals.filter(s => !s.consumed && s.relevance >= 0.5);

@@ -80,7 +80,9 @@ function searchKnowledgeBase(topic) {
         results.notes++;
       }
     }
-  } catch { /* ignore */ }
+  } catch {
+    // 个别文件不可读不影响整体
+  }
   return results;
 }
 

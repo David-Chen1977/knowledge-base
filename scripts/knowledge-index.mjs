@@ -248,7 +248,9 @@ function main() {
       console.log('📖 编译 Wiki 概念页...');
       try {
         execSync(`node "${wikiScript}" --topic "${topic}" --source "${source}" --type article`, { stdio: 'inherit' });
-      } catch {}
+      } catch (e) {
+        console.log('  ⚠️ Wiki 编译失败:', e.message.slice(0, 100));
+      }
     }
   }
 

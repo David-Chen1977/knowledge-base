@@ -21,7 +21,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const SKILL_SCRIPTS = '/Users/Admin/.opencode/skills/nmg-ppt/scripts';
 const NATIVE_PPTX = join(SKILL_SCRIPTS, 'native_pptx.py');
 const PPTX_VENV = '/tmp/pptx-venv/bin/python3';
-const SANJITAO_DIR = '/Users/Admin/三件套输出';
+const SANJITAO_DIR = '/Users/Admin/OpencodeWorkspace/内容输出';
 const BATCH_ROOT = join(__dirname, '生产批次');
 
 // ── Theme definitions ──
@@ -331,7 +331,9 @@ Options:
       if (existsSync(BATCH_ROOT)) {
         batchDirs.push(...readdirSync(BATCH_ROOT).map(d => join(BATCH_ROOT, d)));
       }
-    } catch {}
+    } catch {
+      log('⚠️', 'BATCH_ROOT 不可读，跳过自动发现');
+    }
     for (const dir of batchDirs) {
       const b = readdirSync(dir).find(f => f.endsWith('.bundle.json'));
       const a = readdirSync(dir).find(f => f === 'article.md');
@@ -404,7 +406,9 @@ Options:
           const pythonFinal = py;
           log('🐍', `Using python: ${pythonFinal}`);
           break;
-        } catch {}
+        } catch {
+          // backup python also fails — try next
+        }
       }
     }
   }

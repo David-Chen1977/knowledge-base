@@ -32,7 +32,7 @@ import { resolveVideoQuality, buildHyperFramesArgs, TIERS } from './video-qualit
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DOCS = __dirname;
-const OUTPUT_DIR = '/Users/Admin/三件套输出';
+const OUTPUT_DIR = '/Users/Admin/OpencodeWorkspace/内容输出';
 const BATCH_ROOT = join(DOCS, '生产批次');
 const WECHAT_PUBLISHER = join(DOCS, 'wechat-publisher');
 const KNOWLEDGE_INDEX = join(DOCS, 'knowledge-index.mjs');
@@ -50,6 +50,7 @@ const INGEST_SCRIPT = join(DOCS, 'ingest-research.mjs');
 const RESEARCH_TO_BUNDLE = join(DOCS, 'research-to-bundle.mjs');
 const MD_TO_ASTRO = join(DOCS, 'md-to-astro.mjs');
 const PERSONAL_WEBSITE = join(DOCS, 'personal-website');
+const PLATFORM_CONTENT_GEN = join(DOCS, 'generate-platform-content.mjs');
 
 // ── 工具函数 ──
 
@@ -91,15 +92,7 @@ function runCmd(cmd, opts = {}) {
 
 // Resolve workspace paths from publish.config (shared config)
 let WS_SCRIPTS = join(__dirname);  // default: same directory
-let SANJITAO_DIR = '/Users/Admin/三件套输出';  // fallback
-try {
-  const configPath = join(__dirname, '..', '..', '三件套输出', 'publish.config');
-  const configContent = readFileSync(configPath, 'utf-8');
-  const wsMatch = configContent.match(/^SCRIPTS_DIR="(.+)"/m);
-  const sjMatch = configContent.match(/^SCRIPT_DIR_DEFAULT="(.+)"/m);
-  if (wsMatch) WS_SCRIPTS = wsMatch[1];
-  if (sjMatch) SANJITAO_DIR = sjMatch[1];
-} catch {}
+let SANJITAO_DIR = '/Users/Admin/OpencodeWorkspace/内容输出';  // fallback
 function findScript(name) {
   const primary = join(DOCS, name);
   if (existsSync(primary)) return primary;
@@ -124,7 +117,7 @@ content-pipe — 统一内容生产管线
   --topic "..."        生产主题
 
 选项:
-  --types <list>       产出类型: ppt,article,video,website（默认 all，逗号分隔）
+  --types <list>       产出类型: ppt,article,video,website,article-zhihu,article-toutiao（默认 all，逗号分隔）
   --preview            预览模式（输出 HTML/配置，不实际创建）
   --skip-research      跳过研究阶段
   --publish            发布到公众号
@@ -139,6 +132,9 @@ content-pipe — 统一内容生产管线
   --dashboard           运行后显示生产 Dashboard
   --pool                查看选题池到期选题（不生产）
   --pool-produce        消费选题池所有到期选题并自动展示 Dashboard
+  --draft-all           全平台创建草稿（知乎+头条+公众号）
+  --publish-all         全平台发布草稿（人审后调用，需配合 --batch-dir）
+  --draft-status        查看批次目录内草稿状态
   -h, --help           显示帮助
 
 示例:
@@ -184,8 +180,11 @@ content-pipe — 统一内容生产管线
   const deployWebsite = args.includes('--deploy-website');
   const videoQuality = get('--video-quality') || 'A';
   const showDashboard = args.includes('--dashboard');
+  const draftAll = args.includes('--draft-all');
+  const publishAll = args.includes('--publish-all');
+  const draftStatus = args.includes('--draft-status');
 
-  return { topic, bundlePath, types, preview, skipResearch, publish, skipIndex, dryRun, batchDir, template, ingest, suggestMode, deployWebsite, videoQuality, showDashboard, poolMode, poolProduce };
+  return { topic, bundlePath, types, preview, skipResearch, publish, skipIndex, dryRun, batchDir, template, ingest, suggestMode, deployWebsite, videoQuality, showDashboard, poolMode, poolProduce, draftAll, publishAll, draftStatus };
 }
 
 // ── 批次目录管理 ──
@@ -316,6 +315,21 @@ function resolveBundleFiles(bundle, batchDir, types) {
       writeFileSync(mdPath, bundle.content, 'utf-8');
     }
     files.article = mdPath;
+  }
+
+  // 平台专属文章（从 bundle 生成独立原创内容）
+  for (const p of ['zhihu', 'toutiao']) {
+    if (types.includes(`article-${p}`)) {
+      const outPath = join(batchDir, `article.${p}.md`);
+      if (!existsSync(outPath) && existsSync(PLATFORM_CONTENT_GEN)) {
+        const bundlePath = files.bundle;
+        log('🔄', `生成 ${p} 专属文章...`);
+        const r = runCmd(`node "${PLATFORM_CONTENT_GEN}" --bundle "${bundlePath}" --platform "${p}" --output "${outPath}"`);
+        if (r.ok) log('✅', `${p} 文章已生成`);
+        else log('⚠️', `${p} 文章生成异常: ${r.stderr?.slice(0, 120)}`);
+      }
+      files[`article-${p}`] = outPath;
+    }
   }
 
   if (types.includes('website')) {
@@ -463,9 +477,11 @@ function generatePPT(topic, batchDir, configPath, preview, template = 'nmg') {
     // Still generate deck for preview inspection
     const slug = slugify(topic);
     if (bundleJson) {
-      runCmd(`node "${CONTENT_TO_DECK}" --bundle "${bundleJson}" --theme "${template}" --deck-only`);
+      const r = runCmd(`node "${CONTENT_TO_DECK}" --bundle "${bundleJson}" --theme "${template}" --deck-only`);
+      if (!r.ok) log('⚠️', `PPT deck 预览生成异常: ${r.stderr?.slice(0, 100)}`);
     } else if (existsSync(articlePath)) {
-      runCmd(`node "${CONTENT_TO_DECK}" --topic "${topic}" --article "${articlePath}" --theme "${template}" --deck-only`);
+      const r = runCmd(`node "${CONTENT_TO_DECK}" --topic "${topic}" --article "${articlePath}" --theme "${template}" --deck-only`);
+      if (!r.ok) log('⚠️', `PPT deck 预览生成异常: ${r.stderr?.slice(0, 100)}`);
     }
     return articlePath;
   }
@@ -515,31 +531,291 @@ function generateArticle(topic, batchDir, articlePath, preview, publish) {
   }
 
   if (publish) {
-    const publishSh = join(__dirname, '..', '..', '三件套输出', 'publish.sh');
-    if (!existsSync(publishSh)) {
-      log('⚠️', `publish.sh 不存在: ${publishSh}`);
-      return null;
+    log('🔍', '运行发布前质量检查...');
+    const qcPath = join(SCRIPTS, 'qc-gate.mjs');
+    if (existsSync(qcPath)) {
+      const qcResult = runCmd(`node "${qcPath}" "${articlePath}" --preflight --json`);
+      if (qcResult.ok) {
+        const qc = JSON.parse(qcResult.stdout);
+        const failed = qc.checks.filter(c => c.status === '❌').length;
+        if (failed > 0) {
+          log('❌', `发布前检查未通过: ${failed} 项失败`);
+          return null;
+        }
+        log('✅', `发布前检查通过 (${qc.checks.filter(c => c.status === '✅').length}/${qc.checks.length})`);
+      } else {
+        log('⚠️', `质量检查执行失败: ${qcResult.stderr?.slice(0, 100)}`);
+      }
     }
-    log('📤', '通过 publish.sh 发布到公众号...');
-    const r = runCmd(`bash "${publishSh}" "${articlePath}" --wechat-only --dry-run`);
-    log(r.ok ? '✅' : '❌', `Dry-run 检查: ${r.ok ? '通过' : r.stderr?.slice(0, 200)}`);
-    if (r.ok) {
-      const r2 = runCmd(`bash "${publishSh}" "${articlePath}" --wechat-only`);
-      log(r2.ok ? '✅' : '❌', `公众号发布: ${r2.ok ? '草稿已创建' : r2.stderr?.slice(0, 200)}`);
-      return r2.ok ? articlePath : null;
-    }
-    return null;
+    log('ℹ️', '公众号发布已迁移至 wenyan-mcp 管线，请通过 wenyan-mcp 手动发布');
+    return articlePath;
   }
 
-  // 自动生成多平台适配版（非 preview 模式）
-  if (!preview) {
-    const adapter = findScript('article_adapt.py');
-    if (existsSync(adapter)) {
-      runCmd(`python3 "${adapter}" "${articlePath}" --platform all`);
-    }
+  // 自动生成多平台适配版（非 preview / 非 publish 模式）
+  const adapter = findScript('article_adapt.py');
+  if (existsSync(adapter)) {
+    const r = runCmd(`python3 "${adapter}" "${articlePath}" --platform all`);
+    if (!r.ok) log('⚠️', `多平台适配异常: ${r.stderr?.slice(0, 100)}`);
   }
 
   return articlePath;
+}
+
+// ── 阶段: 平台专属文章生成（知乎/头条独立原创） ──
+
+function generatePlatformArticle(platform, topic, batchDir, bundle, preview) {
+  /**
+   * 从 bundle 生成平台专属原创文章（结构/角度/文风完全不同）
+   * 满足各平台首发原创要求
+   */
+  const label = platform === 'zhihu' ? '知乎' : '头条号';
+  log(`📝`, `生成${label}专属文章...`);
+
+  if (!existsSync(PLATFORM_CONTENT_GEN)) {
+    log('⚠️', `generate-platform-content.mjs 不存在，跳过${label}`);
+    return null;
+  }
+
+  // Find bundle JSON
+  let bundlePath = null;
+  if (bundle?.files?.bundle) {
+    bundlePath = bundle.files.bundle;
+  } else if (bundle && existsSync(join(batchDir, `${bundle.slug || slugify(topic)}.bundle.json`))) {
+    bundlePath = join(batchDir, `${bundle.slug || slugify(topic)}.bundle.json`);
+  } else {
+    // Search for .bundle.json in batch dir
+    const files = readdirSync(batchDir).filter(f => f.endsWith('.bundle.json'));
+    if (files.length > 0) bundlePath = join(batchDir, files[0]);
+  }
+
+  if (!bundlePath) {
+    log('⚠️', `未找到 bundle.json，${label}文章需 bundle 数据作为来源`);
+    return null;
+  }
+
+  const outPath = join(batchDir, `article.${platform}.md`);
+
+  if (preview) {
+    log('👁️', `${label}文章预览: ${outPath}`);
+    return outPath;
+  }
+
+  const r = runCmd(`node "${PLATFORM_CONTENT_GEN}" --bundle "${bundlePath}" --platform "${platform}" --output "${outPath}"`);
+  if (r.ok && existsSync(outPath)) {
+    const content = readFileSync(outPath, 'utf-8');
+    log('✅', `${label}文章已生成 (${content.length} 字符)`);
+    log('📋', `   ${outPath}`);
+    log('ℹ️', `   注意：此文为基于 bundle facts 的原创骨架，`);
+    log('   ', `   请在编辑器中润色完善以达到 ${label} 首发标准`);
+    return outPath;
+  } else {
+    log('⚠️', `${label}文章生成异常: ${r.stderr?.slice(0, 150)}`);
+    return null;
+  }
+}
+
+// ── 阶段: 多平台草稿/发布 ──
+
+function draftAll(articlePath, batchDir, bundle) {
+  /**
+   * 全平台创建草稿（三篇独立原创）
+   * article.md  → 公众号（已有 wechat_publisher）
+   * bundle      → 知乎专属文章 → 知乎草稿
+   * bundle      → 头条专属文章 → 头条草稿
+   */
+  log('📋', '全平台创建草稿...');
+  if (!articlePath || !existsSync(articlePath)) {
+    log('⚠️', '文章文件不存在，跳过草稿创建');
+    return false;
+  }
+
+  const articleDir = dirname(articlePath);
+
+  // Step 1: 从 bundle 生成平台专属原创文章
+  log('🔄', '生成平台专属文章（知乎/头条各一篇独立原创）...');
+
+  let zhihuArticlePath = join(articleDir, 'article.zhihu.md');
+  let toutiaoArticlePath = join(articleDir, 'article.toutiao.md');
+
+  // 仅当平台文章不存在时才重新生成（已有则复用，人工可能已做修改）
+  if (!existsSync(zhihuArticlePath) && bundle) {
+    const zhihuPath = generatePlatformArticle('zhihu', bundle.topic || '', articleDir, bundle, false);
+    if (zhihuPath) zhihuArticlePath = zhihuPath;
+  }
+  if (!existsSync(toutiaoArticlePath) && bundle) {
+    const toutiaoPath = generatePlatformArticle('toutiao', bundle.topic || '', articleDir, bundle, false);
+    if (toutiaoPath) toutiaoArticlePath = toutiaoPath;
+  }
+
+  // Step 2: 更新草稿状态（格式校验 + 预览 + 状态跟踪）
+  const adapter = findScript('article_adapt.py');
+  if (existsSync(adapter)) {
+    log('🔄', '运行格式校验与草稿状态初始化...');
+    const r = runCmd(`python3 "${adapter}" "${articlePath}" --platform all`);
+    if (!r.ok) log('⚠️', `格式校验异常: ${r.stderr?.slice(0, 150)}`);
+  }
+
+  // Step 3: 知乎草稿
+  const zhihuPublisher = findScript('zhihu_publisher.py');
+  if (existsSync(zhihuPublisher) && existsSync(zhihuArticlePath)) {
+    log('🔄', '创建知乎草稿（将打开浏览器）...');
+    const r = runCmd(`python3 "${zhihuPublisher}" --draft "${zhihuArticlePath}"`);
+    if (r.ok) {
+      log('✅', '知乎草稿创建完成（独立原创文章）');
+    } else {
+      log('⚠️', `知乎草稿异常: ${r.stderr?.slice(0, 150)}`);
+    }
+  } else {
+    log('⚠️', 'zhihu_publisher.py 不存在或无知乎文章，跳过知乎');
+  }
+
+  // Step 4: 头条草稿
+  const toutiaoPublisher = findScript('toutiao_publisher.py');
+  if (existsSync(toutiaoPublisher) && existsSync(toutiaoArticlePath)) {
+    log('🔄', '创建头条号草稿（将打开浏览器）...');
+    const r = runCmd(`python3 "${toutiaoPublisher}" --draft "${toutiaoArticlePath}"`);
+    if (r.ok) {
+      log('✅', '头条号草稿创建完成（独立原创文章）');
+    } else {
+      log('⚠️', `头条号草稿异常: ${r.stderr?.slice(0, 150)}`);
+    }
+  } else {
+    log('⚠️', 'toutiao_publisher.py 不存在或无头条文章，跳过头条');
+  }
+
+  // Step 5: 微信公众号预览（沿用已有管线）
+  const wechatPub = findScript('wechat_publisher.py');
+  if (existsSync(wechatPub)) {
+    log('🔄', '生成微信公众号预览...');
+    const r = runCmd(`python3 "${wechatPub}" --md "${articlePath}" --preview`);
+    if (r.ok) {
+      log('✅', '微信预览 HTML 已生成');
+    } else {
+      log('⚠️', `微信预览异常: ${r.stderr?.slice(0, 100)}`);
+    }
+  }
+
+  // Step 6: 生成统一的审阅索引
+  const previewHtml = join(articleDir, 'article.preview.html');
+  if (existsSync(previewHtml)) {
+    log('👁️', `审阅预览: ${previewHtml}`);
+    log('📋', `  📄 知乎版: ${zhihuArticlePath}`);
+    log('📋', `  📄 头条版: ${toutiaoArticlePath}`);
+    log('📋', `  📄 公众号版: ${articlePath}`);
+  }
+
+  log('📋', '');
+  log('📋', '全平台草稿创建完成！三篇文章均为独立原创。');
+  log('📋', '请在各平台审阅编辑后，运行 --publish-all 发布。');
+  log('📋', '如需重新生成平台文章，删除对应 article.zhihu.md / article.toutiao.md 再运行。');
+  return true;
+}
+
+function publishAll(batchDir) {
+  /**
+   * 全平台发布已有草稿（第二阶段：人工审阅后）
+   * 需要 --batch-dir 指定批次目录，读取 .draft-state.json
+   */
+  if (!batchDir) {
+    log('❌', '--publish-all 需要 --batch-dir <批次目录>');
+    return false;
+  }
+
+  const statePath = join(batchDir, '.draft-state.json');
+  if (!existsSync(statePath)) {
+    log('❌', `草稿状态文件不存在: ${statePath}。请先用 --draft-all 创建草稿。`);
+    return false;
+  }
+
+  log('📋', '全平台发布...');
+  const state = JSON.parse(readFileSync(statePath, 'utf-8'));
+  const drafts = state.drafts || {};
+
+  // 知乎发布
+  if (drafts.zhihu?.status === 'draft' && drafts.zhihu?.draft_id) {
+    const zhihuPublisher = findScript('zhihu_publisher.py');
+    if (existsSync(zhihuPublisher)) {
+      log('🔄', '发布知乎草稿...');
+      const r = runCmd(`python3 "${zhihuPublisher}" --publish "${drafts.zhihu.draft_id}"`);
+      if (r.ok) {
+        log('✅', '知乎发布完成');
+        drafts.zhihu.status = 'published';
+        drafts.zhihu.updated_at = new Date().toISOString();
+      } else {
+        log('⚠️', `知乎发布异常: ${r.stderr?.slice(0, 150)}`);
+      }
+    }
+  } else {
+    log('ℹ️', '知乎: 无需发布（无草稿或已发布）');
+  }
+
+  // 头条发布
+  if (drafts.toutiao?.status === 'draft' && drafts.toutiao?.draft_id) {
+    const toutiaoPublisher = findScript('toutiao_publisher.py');
+    if (existsSync(toutiaoPublisher)) {
+      log('🔄', '发布头条号草稿...');
+      const r = runCmd(`python3 "${toutiaoPublisher}" --publish "${drafts.toutiao.draft_id}"`);
+      if (r.ok) {
+        log('✅', '头条号发布完成');
+        drafts.toutiao.status = 'published';
+        drafts.toutiao.updated_at = new Date().toISOString();
+      } else {
+        log('⚠️', `头条号发布异常: ${r.stderr?.slice(0, 150)}`);
+      }
+    }
+  } else {
+    log('ℹ️', '头条号: 无需发布（无草稿或已发布）');
+  }
+
+  // 微信：提示手动发布
+  log('ℹ️', '微信公众号：请前往 mp.weixin.qq.com 草稿箱手动发布');
+  if (drafts.wechat) {
+    drafts.wechat.status = 'pending_manual_publish';
+    drafts.wechat.updated_at = new Date().toISOString();
+  }
+
+  // Save updated state
+  state.drafts = drafts;
+  state.human_reviewed = true;
+  state.human_reviewed_at = new Date().toISOString();
+  writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf-8');
+  log('📋', `草稿状态已更新: ${statePath}`);
+
+  log('🎉', '全平台发布流程完成！');
+  return true;
+}
+
+function showDraftStatus(batchDir) {
+  /** 显示批次目录的草稿状态 */
+  if (!batchDir) {
+    log('❌', '--draft-status 需要 --batch-dir <批次目录>');
+    return false;
+  }
+
+  const statePath = join(batchDir, '.draft-state.json');
+  if (!existsSync(statePath)) {
+    log('📋', '无草稿状态文件（尚未创建草稿）');
+    return false;
+  }
+
+  const state = JSON.parse(readFileSync(statePath, 'utf-8'));
+  console.log('\n📋 草稿状态');
+  console.log('━'.repeat(40));
+  console.log(`主题: ${state.topic || '未知'}`);
+  console.log(`生成时间: ${state.generated_at || '未知'}`);
+  console.log(`人工审阅: ${state.human_reviewed ? '✅ 已完成' : '⏳ 待审阅'}`);
+  if (state.human_reviewed_at) console.log(`审阅时间: ${state.human_reviewed_at}`);
+  console.log('');
+
+  const platforms = { zhihu: '知乎', toutiao: '头条号', wechat: '微信公众号' };
+  for (const [key, label] of Object.entries(platforms)) {
+    const d = state.drafts?.[key] || {};
+    const statusIcon = { pending: '⏳', draft: '📝', published: '✅', error: '❌', pending_manual_publish: '👆' }[d.status] || '⏳';
+    console.log(`  ${statusIcon} ${label}: ${d.status || 'pending'}${d.url ? ` (${d.url})` : ''}`);
+    if (d.error) console.log(`      错误: ${d.error}`);
+  }
+  console.log('');
+  return true;
 }
 
 // ── 阶段: 视频生成 ──
@@ -624,7 +900,8 @@ function callMPTApi(topic, scriptPath) {
       }
     }
     return { ok: false };
-  } catch {
+  } catch (e) {
+    log('⚠️', `MPT API 调用异常: ${e.message}`);
     return { ok: false };
   }
 }
@@ -722,7 +999,7 @@ async function main() {
   console.log('  📦 content-pipe — 统一内容生产管线');
   console.log('='.repeat(56) + '\n');
 
-  const { topic, bundlePath, types, preview, skipResearch, publish, skipIndex, dryRun, batchDir: customDir, template, ingest, suggestMode, deployWebsite, videoQuality, showDashboard, poolMode, poolProduce } = parseArgs();
+  const { topic, bundlePath, types, preview, skipResearch, publish, skipIndex, dryRun, batchDir: customDir, template, ingest, suggestMode, deployWebsite, videoQuality, showDashboard, poolMode, poolProduce, draftAll: draftAllFlag, publishAll: publishAllFlag, draftStatus } = parseArgs();
 
   // ── 选题建议模式（双管道） ──
   if (suggestMode) {
@@ -797,6 +1074,50 @@ async function main() {
     return;
   }
 
+  // ── 多平台草稿/发布模式（独立快捷操作） ──
+
+  if (draftStatus) {
+    // --draft-status 需要 --batch-dir
+    const targetDir = customDir || process.env.BATCH_DIR;
+    if (!targetDir) {
+      log('❌', '--draft-status 需要 --batch-dir <批次目录>');
+      return;
+    }
+    showDraftStatus(targetDir);
+    return;
+  }
+
+  if (publishAllFlag) {
+    // --publish-all 需要 --batch-dir
+    const targetDir = customDir || process.env.BATCH_DIR;
+    if (!targetDir) {
+      log('❌', '--publish-all 需要 --batch-dir <批次目录>');
+      return;
+    }
+    publishAll(targetDir);
+    return;
+  }
+
+  if (draftAllFlag) {
+    var dDir = customDir || process.env.BATCH_DIR;
+    if (dDir) {
+      var dArt = join(dDir, 'article.md');
+      if (existsSync(dArt)) {
+        // Try to find bundle.json for platform article generation
+        var dBundle = null;
+        try {
+          var dBundleFiles = readdirSync(dDir).filter(f => f.endsWith('.bundle.json'));
+          if (dBundleFiles.length > 0) {
+            dBundle = JSON.parse(readFileSync(join(dDir, dBundleFiles[0]), 'utf-8'));
+          }
+        } catch {}
+        draftAll(dArt, dDir, dBundle);
+        return;
+      }
+      log('⚠️', '批次目录 ' + dDir + ' 中无 article.md，先走生产管线');
+    }
+  }
+
   // ── Bundle 模式: 使用已有研究包 ──
   let effectiveTopic = topic;
   let effectiveBatchDir = null;
@@ -830,7 +1151,9 @@ async function main() {
           if (num) found = files.find(f => f.startsWith(`${num}_`));
         }
         found = found ? join(outDir, found) : null;
-      } catch {}
+      } catch {
+        log('ℹ️', '扫描输出目录获取文章失败');
+      }
       if (found) {
         cpSync(found, articlePath);
         log('📄', `copy 文章: ${basename(found)}`);
@@ -879,11 +1202,11 @@ async function main() {
             results.files.ingested = join(ingestOut, ingested[0]);
             log('📄', `研究基准: ${ingested[0]}`);
           }
-        } catch {
-          // ignore scan errors
+        } catch (e) {
+          log('⚠️', `扫描消化结果失败: ${e.message}`);
         }
       } else {
-        log('⚠', `研报消化失败: ${r.stderr?.slice(0, 200)}`);
+        log('⚠️', `研报消化失败: ${r.stderr?.slice(0, 200)}`);
       }
     }
   }
@@ -931,10 +1254,23 @@ async function main() {
         if (!filePath || typeof filePath !== 'string' || !existsSync(filePath)) continue;
         if (outputType === 'bundle' || outputType === 'pptConfig') continue; // 跳过中间文件
         log('🔍', `QC 门禁 — ${outputType}: ${basename(filePath)}`);
-        runCmd(`node "${QC_GATE}" "${filePath}"`);
+        const strictFlag = outputType === 'article' || outputType === 'wechat' ? '--preflight' : '--strict';
+        const qcR = runCmd(`node "${QC_GATE}" "${filePath}" ${strictFlag}`);
+        if (!qcR.ok) {
+          log('  ❌', `QC 未通过（${strictFlag}），产出: ${outputType}`);
+          results.errors.push(`QC 失败: ${outputType}`);
+        } else {
+          console.log(qcR.stdout.slice(-200));
+        }
         console.log('');
       }
     }
+  }
+
+  // 4.6 多平台草稿创建（--draft-all）
+  if (draftAllFlag && results.files.article) {
+    log('📋', '触发多平台草稿创建...');
+    draftAll(results.files.article, batchDir, bundle);
   }
 
   // 5. 生产报告
@@ -949,7 +1285,8 @@ async function main() {
     const sourceCandidates = [bundle.files.article, bundle.files.wechat, bundle.files.videoScript].filter(Boolean);
     if (existsSync(wikiScript) && sourceCandidates.length > 0) {
       log('📖', '编译 Wiki 概念页...');
-      runCmd(`node "${wikiScript}" --topic "${bundle.topic}" --source "${sourceCandidates[0]}" --type article`);
+      const r = runCmd(`node "${wikiScript}" --topic "${bundle.topic}" --source "${sourceCandidates[0]}" --type article`);
+      if (!r.ok) log('⚠️', `Wiki 编译异常: ${r.stderr?.slice(0, 100)}`);
     }
   }
 
@@ -981,7 +1318,8 @@ async function main() {
   // 9. 可选显示 Dashboard
   if (showDashboard && existsSync(DASHBOARD_SCRIPT)) {
     log('📊', '打开生产 Dashboard...');
-    runCmd(`node "${DASHBOARD_SCRIPT}" --html --open`);
+    const r = runCmd(`node "${DASHBOARD_SCRIPT}" --html --open`);
+    if (!r.ok) log('⚠️', `Dashboard 启动异常: ${r.stderr?.slice(0, 100)}`);
   }
 }
 
