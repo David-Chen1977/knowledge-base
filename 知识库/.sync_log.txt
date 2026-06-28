@@ -1463,3 +1463,52 @@ fatal: unable to access 'https://github.com/David-Chen1977/knowledge-base.git/':
 ✅ 完成: 143 已正确, 0 已更新, 0 错误
 [2026-06-28 09:00:06] ▶ 收集公开文件...
 [2026-06-28 09:00:12] ✅ 同步: +0 更新 / 151 跳过
+[2026-06-28 21:00:05] === vault → 网站 同步 v4 ===
+[2026-06-28 21:00:05] ▶ 运行 visibility 检查...
+📄 扫描到 151 个 .md 文件
+
+  ⚠️  10-知识库/index.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/AI协作系统构建实录.md: public → 应为 private
+  ⚠️  10-知识库/人机协同/PPT管线修复的人机协同实践.md: public → 应为 private
+  ⚠️  10-知识库/算电协同/_回流_2026-06-25_AI+能源双向赋能.md: private → 应为 public
+  ⚠️  10-知识库/算电协同/_回流_2026-06-28_十五五能源规划&算电协同.md: private → 应为 public
+  ⚠️  10-知识库/🏠 首页.md: public → 应为 private
+  ⚠️  90-公开/电改2.0进度地图_公众号版_with_images.md: (缺失) → 应为 public
+  ⚠️  README.md: (缺失) → 应为 private
+
+✅ 完成: 143 已正确, 0 已更新, 0 错误
+[2026-06-28 21:00:05] ▶ 收集公开文件...
+[2026-06-28 21:00:06]   ✓ 电改2.0进度地图_网站深度版.md
+[2026-06-28 21:00:06]   ✓ 电改2.0进度地图_公众号版.md
+[2026-06-28 21:00:06]   ✓ 算电协同/_回流_2026-06-24_电改2.0进度地图.md
+[2026-06-28 21:00:07]   ✓ 算电协同/_深化_2026-06-24_算电岛技术拆解.md
+[2026-06-28 21:00:09]   ✓ 电力新能源/电力市场/赛道文件.md
+[2026-06-28 21:00:10]   ✓ 人机协同/AI协作系统构建实录.md
+[2026-06-28 21:00:10]   ✓ 人机协同/PPT管线修复的人机协同实践.md
+[2026-06-28 21:00:12] ✅ 同步: +7 更新 / 144 跳过
+[2026-06-28 21:00:12] 🚀 检测到 7 个文件更新，触发网站重新部署...
+
+> knowledge-base-site@1.0.0 build
+> vitepress build docs
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 13.74s.
+[2026-06-28 21:00:27]   ✓ VitePress 构建成功
+[2026-06-28 21:00:27]   ▶ 清理已撤销公开的文件...
+[main a7b005e] auto-sync: vault内容同步 2026-06-28 21:00
+ 79 files changed, 236 insertions(+), 236 deletions(-)
+To https://github.com/David-Chen1977/knowledge-base.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/David-Chen1977/knowledge-base.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-06-28 21:00:35]   ⚠️ git push 失败
