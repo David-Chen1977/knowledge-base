@@ -1,0 +1,598 @@
+{
+  "title": "一文读懂算电协同产业图谱",
+  "theme": "personal",
+  "slides": [
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 6.8,
+          "w": 3,
+          "h": 0.06,
+          "fill": "#2C3E50"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 6.2,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#E74C3C"
+        }
+      ],
+      "texts": [
+        {
+          "text": "一文读懂算电协同产业图谱",
+          "x": 0.8,
+          "y": 2.5,
+          "w": 11,
+          "h": 2,
+          "fontSize": 40,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "汇竑资本 · 研究出品",
+          "x": 0.8,
+          "y": 4.6,
+          "w": 8,
+          "h": 0.6,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#BDC3C7",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "2026-06-28",
+          "x": 0.8,
+          "y": 5.2,
+          "w": 4,
+          "h": 0.5,
+          "fontSize": 14,
+          "bold": false,
+          "color": "#BDC3C7",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 0.15,
+          "h": 7.5,
+          "fill": "#E74C3C"
+        }
+      ],
+      "texts": [
+        {
+          "text": "目 录",
+          "x": 1,
+          "y": 0.6,
+          "w": 5,
+          "h": 0.9,
+          "fontSize": 32,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "1. 引言：算电协同为什么成为新基建\n2. 底层逻辑：三个错配与不可能三角\n3. 政策全景图：从政府工作报告到688号文\n4. 产业链全景图谱：上游设备/中游平台/下游应用\n5. 六大赛道深度拆解\n6. 标杆项目全国地图\n7. 投资机会图谱：PE/VC视角\n8. 风险与展望",
+          "x": 1,
+          "y": 1.8,
+          "w": 10,
+          "h": 4.5,
+          "fontSize": 20,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "引言：算电协同为什么成为新基建",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "底层逻辑：三个错配与不可能三角",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "政策全景图：从政府工作报告到688号文",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "产业链全景图谱：上游设备/中游平台/下游应用",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "六大赛道深度拆解",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "标杆项目全国地图",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "投资机会图谱：PE/VC视角",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "风险与展望",
+          "x": 1,
+          "y": 0.6,
+          "w": 10,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "（待补充详细内容）",
+          "x": 1,
+          "y": 1.8,
+          "w": 11,
+          "h": 4.5,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#FFFFFF",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "rect",
+          "x": 0.6,
+          "y": 0.8,
+          "w": 0.08,
+          "h": 0.5,
+          "fill": "#E74C3C"
+        },
+        {
+          "type": "rounded_rect",
+          "x": 0.8,
+          "y": 1.8,
+          "w": 11.5,
+          "h": 4.8,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "关键数据",
+          "x": 1,
+          "y": 0.6,
+          "w": 5,
+          "h": 0.9,
+          "fontSize": 28,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "📊 [object Object]\n\n📊 [object Object]\n\n📊 [object Object]\n\n📊 [object Object]",
+          "x": 1.2,
+          "y": 2.2,
+          "w": 10.8,
+          "h": 4.2,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#FFFFFF",
+          "align": "left",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    },
+    {
+      "background": "#1a1a2e",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.33,
+          "h": 7.5,
+          "fill": "#1a1a2e"
+        },
+        {
+          "type": "rect",
+          "x": 4.67,
+          "y": 4.2,
+          "w": 4,
+          "h": 0.04,
+          "fill": "#2C3E50"
+        }
+      ],
+      "texts": [
+        {
+          "text": "感谢观看",
+          "x": 1.5,
+          "y": 2.5,
+          "w": 10,
+          "h": 1.5,
+          "fontSize": 36,
+          "bold": true,
+          "color": "#2C3E50",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        },
+        {
+          "text": "汇竑资本 · 共创绿色能源未来",
+          "x": 1.5,
+          "y": 4.5,
+          "w": 10,
+          "h": 0.8,
+          "fontSize": 18,
+          "bold": false,
+          "color": "#BDC3C7",
+          "align": "center",
+          "font": "Microsoft YaHei"
+        }
+      ]
+    }
+  ]
+}
