@@ -17,10 +17,16 @@ LOG_FILE="/Users/Admin/OpencodeWorkspace/知识库/.sync_log.txt"
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"; }
 log "=== vault → 网站 同步 v4 ==="
 
-# 检查上次失败标记
+# 检查并清理上次失败标记（v5: 启动时清理，避免残留）
 KB_DIR="/Users/Admin/OpencodeWorkspace/知识库"
-[ -f "$KB_DIR/.build_failure" ] && log "⚠️ 上次构建失败: $(cat "$KB_DIR/.build_failure" | head -1)"
-[ -f "$KB_DIR/.deploy_failure" ] && log "⚠️ 上次部署失败: $(cat "$KB_DIR/.deploy_failure" | head -1)"
+if [ -f "$KB_DIR/.build_failure" ]; then
+  log "⚠️ 清理上次构建失败标记: $(cat "$KB_DIR/.build_failure" | head -1)"
+  rm -f "$KB_DIR/.build_failure"
+fi
+if [ -f "$KB_DIR/.deploy_failure" ]; then
+  log "⚠️ 清理上次部署失败标记: $(cat "$KB_DIR/.deploy_failure" | head -1)"
+  rm -f "$KB_DIR/.deploy_failure"
+fi
 
 # ── 前置检查 ──
 NODE="/Users/Admin/.local/bin/node"
