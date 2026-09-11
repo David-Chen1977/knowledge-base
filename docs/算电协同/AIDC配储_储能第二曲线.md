@@ -1,5 +1,6 @@
 ---
 title: AIDC配储：储能第二曲线
+updated: 2026-07-12
 visibility: public
 date: 2026-07-12
 tags: [储能, AIDC, 算电协同, 产业链]
