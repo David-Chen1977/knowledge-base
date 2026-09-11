@@ -18,11 +18,5 @@ scripts/.env
 # Temp
 _archive/
 
-# 独立 git repo（知识库网站）
-知识库网站/
-
-# workspace root docs 指向 知识库网站/docs/ 的符号链接
-docs/
-
 # Obsidian workspace
 .obsidian/
